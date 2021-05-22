@@ -1,7 +1,11 @@
-import Home from "./components/Home";
+import "./App.css";
 
 function App() {
-  return <Home />;
+  return (
+    <div className="App">
+      <h1>React Working</h1>
+    </div>
+  );
 }
 
 export default App;
