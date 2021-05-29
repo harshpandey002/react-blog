@@ -6,7 +6,6 @@ import Blogs from "./Blogs/Blogs";
 function Main() {
   return (
     <div className="Main">
-      <h2>Main Component</h2>
       <Info />
       <Blogs />
       <p>

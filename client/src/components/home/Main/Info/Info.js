@@ -3,7 +3,7 @@ import "./Info.css";
 
 function Info() {
   return (
-    <div>
+    <div className="Info">
       <h3>Info Component</h3>
     </div>
   );

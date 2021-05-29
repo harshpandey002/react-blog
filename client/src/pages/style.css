@@ -3,6 +3,16 @@
     display: flex;
     justify-content: space-evenly;
     text-align: center;
-    gap: 0.5%;
+    gap: 2%;
   }
+}
+
+.Filter,
+.Main,
+.Nav,
+.Action,
+.Form,
+.Editor,
+.BlogDetails {
+  padding: var(--padding);
 }

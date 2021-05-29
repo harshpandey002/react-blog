@@ -1,4 +1,7 @@
 .Editor {
-  background-color: #a7de87;
-  flex: 40;
+  background-color: var(--fg-color);
+  border-radius: var(--bd-radius);
+  box-shadow: var(--bx-shadow);
+  flex: var(--ct-flex);
+  height: max-content;
 }

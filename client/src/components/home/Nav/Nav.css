@@ -1,7 +1,9 @@
 .Nav {
+  background-color: var(--fg-color);
+  border-radius: var(--bd-radius);
+  box-shadow: var(--bx-shadow);
+  flex: var(--rt-flex);
   position: sticky;
   height: max-content;
-  background-color: #e5ec7e;
   top: 30px;
-  flex: 15;
 }

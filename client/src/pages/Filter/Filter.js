@@ -4,7 +4,15 @@ import "./Filter.css";
 function Filter() {
   return (
     <div className="Filter">
-      <h2>Filter Component</h2>
+      <p>Filter Item</p>
+      <p>Filter Item</p>
+      <p>Filter Item</p>
+      <p>Filter Item</p>
+      <p>Filter Item</p>
+      <p>Filter Item</p>
+      <p>Filter Item</p>
+      <p>Filter Item</p>
+      <p>Filter Item</p>
     </div>
   );
 }

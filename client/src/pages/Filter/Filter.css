@@ -1,7 +1,9 @@
 .Filter {
+  background-color: var(--fg-color);
+  border-radius: var(--bd-radius);
+  box-shadow: var(--bx-shadow);
+  flex: var(--lt-flex);
   position: sticky;
   height: max-content;
-  background-color: rgb(122, 221, 224);
   top: 30px;
-  flex: 10;
 }
