@@ -5,5 +5,5 @@
   flex: var(--lt-flex);
   position: sticky;
   height: max-content;
-  top: 30px;
+  top: var(--sticky);
 }

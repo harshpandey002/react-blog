@@ -1,18 +1,17 @@
-@media only screen and (min-width: 780px) {
-  .Page {
-    display: flex;
-    justify-content: space-evenly;
-    text-align: center;
-    gap: 2%;
-  }
+.Page {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  gap: 30px;
 }
 
 .Filter,
-.Main,
 .Nav,
 .Action,
 .Form,
 .Editor,
-.BlogDetails {
+.Info,
+.BlogDetails,
+.Blogs {
   padding: var(--padding);
 }

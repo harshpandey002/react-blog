@@ -3,10 +3,11 @@
   --fg-color: rgb(255, 255, 255);
   --bx-shadow: rgba(0, 0, 0, 0.25) 0px 2px 8px 0px;
   --bd-radius: 20px;
-  --padding: 20px;
   --lt-flex: 5;
   --rt-flex: 8;
   --ct-flex: 33;
+  --padding: 20px;
+  --sticky: 50px;
 }
 
 * {
@@ -27,5 +28,5 @@ body {
 }
 
 .App {
-  padding: 2%;
+  padding: 50px;
 }
