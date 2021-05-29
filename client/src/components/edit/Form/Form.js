@@ -3,7 +3,7 @@ import "./Form.css";
 
 function Form() {
   return (
-    <div>
+    <div className="Action">
       <h2>Form Component</h2>
     </div>
   );

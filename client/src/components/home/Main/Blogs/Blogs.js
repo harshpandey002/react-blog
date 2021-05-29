@@ -4,7 +4,7 @@ import "./Blogs.css";
 function Blogs() {
   return (
     <div>
-      <h3>- Blogs Component</h3>
+      <h3>Blogs Component</h3>
     </div>
   );
 }

@@ -1,0 +1,8 @@
+@media only screen and (min-width: 780px) {
+  .Page {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    gap: 0.5%;
+  }
+}

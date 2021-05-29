@@ -1,0 +1,7 @@
+.Nav {
+  position: sticky;
+  height: max-content;
+  background-color: #e5ec7e;
+  top: 30px;
+  flex: 15;
+}

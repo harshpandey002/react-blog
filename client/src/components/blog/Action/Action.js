@@ -1,8 +1,9 @@
 import React from "react";
+import "./Action.css";
 
 function Action() {
   return (
-    <div>
+    <div className="Action">
       <h2>Action Component</h2>
     </div>
   );

@@ -1,0 +1,7 @@
+.Filter {
+  position: sticky;
+  height: max-content;
+  background-color: rgb(122, 221, 224);
+  top: 30px;
+  flex: 10;
+}

@@ -14,7 +14,7 @@ import {
 function App() {
   return (
     <Router>
-      <div>
+      <div className="App">
         <Switch>
           <Route path="/home" component={Home} />
           <Route path="/blog/:id" component={Blog} />

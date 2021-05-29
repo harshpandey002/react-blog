@@ -2,11 +2,11 @@ import React from "react";
 import Filter from "../Filter/Filter";
 import Main from "../../components/home/Main/Main";
 import Nav from "../../components/home/Nav/Nav";
+import "../style.css";
 
 function Home() {
   return (
-    <div>
-      <h1>HOME PAGE</h1>
+    <div className="Page">
       <Filter />
       <Main />
       <Nav />

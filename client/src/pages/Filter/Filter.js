@@ -3,7 +3,7 @@ import "./Filter.css";
 
 function Filter() {
   return (
-    <div>
+    <div className="Filter">
       <h2>Filter Component</h2>
     </div>
   );

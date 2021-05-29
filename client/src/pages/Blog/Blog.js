@@ -1,13 +1,14 @@
 import React from "react";
-import "./Blog.css";
 import Filter from "../Filter/Filter";
 import BlogDetails from "../../components/blog/BlogDetails/BlogDetails";
 import Action from "../../components/blog/Action/Action";
 
+import "./Blog.css";
+import "../style.css";
+
 function Blog() {
   return (
-    <div>
-      <h1>BLOG PAGE</h1>
+    <div className="Page">
       <Filter />
       <BlogDetails />
       <Action />

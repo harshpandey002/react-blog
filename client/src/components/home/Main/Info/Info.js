@@ -4,7 +4,7 @@ import "./Info.css";
 function Info() {
   return (
     <div>
-      <h3>- Info Component</h3>
+      <h3>Info Component</h3>
     </div>
   );
 }
