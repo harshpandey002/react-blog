@@ -1,9 +1,10 @@
 import React from "react";
+import "./Filter.css";
 
 function Filter() {
   return (
     <div>
-      <h2>Filter</h2>
+      <h1>Filter</h1>
     </div>
   );
 }

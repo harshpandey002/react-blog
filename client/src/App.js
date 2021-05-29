@@ -1,7 +1,7 @@
 import "./App.css";
-import Home from "./pages/Home";
-import Filter from "./components/Filter";
-import Blog from "./pages/Blog";
+import Home from "./pages/Home/Home";
+import Edit from "./pages/Edit/Edit";
+import Blog from "./pages/Blog/Blog";
 
 //Router
 import {
@@ -10,13 +10,11 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
-import Edit from "./pages/Edit";
 
 function App() {
   return (
     <Router>
       <div>
-        <Filter />
         <Switch>
           <Route path="/home" component={Home} />
           <Route path="/blog/:id" component={Blog} />
