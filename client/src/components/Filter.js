@@ -1,11 +1,11 @@
 import React from "react";
 
-function Home() {
+function Filter() {
   return (
     <div>
-      <h1>HOME PAGE</h1>
+      <h2>Filter</h2>
     </div>
   );
 }
 
-export default Home;
+export default Filter;
