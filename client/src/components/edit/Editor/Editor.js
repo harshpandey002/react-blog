@@ -4,7 +4,7 @@ import "./Editor.css";
 function Editor() {
   return (
     <div>
-      <h1>Editor Component</h1>
+      <h2>Editor Component</h2>
     </div>
   );
 }

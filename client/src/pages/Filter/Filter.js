@@ -4,7 +4,7 @@ import "./Filter.css";
 function Filter() {
   return (
     <div>
-      <h1>Filter</h1>
+      <h2>Filter Component</h2>
     </div>
   );
 }
