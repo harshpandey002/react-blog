@@ -1,0 +1,13 @@
+.Action .btn {
+  border-radius: 13px;
+}
+
+.Action .btn:hover .btn--icon {
+  background-color: var(--ic-bg-color);
+  margin-right: 5px;
+}
+
+.Action .btn:hover {
+  color: black;
+  font-weight: 600;
+}
