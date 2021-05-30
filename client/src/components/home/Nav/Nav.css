@@ -1,0 +1,36 @@
+.Nav .btn {
+  border-radius: 13px;
+  transition: all 0.3s ease;
+}
+
+.Nav .btn:nth-child(1):hover .btn--icon {
+  background-color: var(--ic-bg-color);
+  margin-right: 5px;
+  transform: rotateZ(90deg);
+}
+.Nav .btn:nth-child(2):hover .btn--icon {
+  background-color: var(--ic-bg-color);
+  margin-right: 5px;
+  transform: rotateX(180deg);
+}
+.Nav .btn:nth-child(3):hover .btn--icon {
+  margin-right: 5px;
+  transform: rotateY(180deg);
+}
+
+.Nav .btn:nth-child(1):hover {
+  color: #000000;
+  font-weight: 600;
+}
+.Nav .btn:nth-child(2):hover {
+  color: #000000;
+  font-weight: 600;
+}
+.Nav .btn:nth-child(3):hover {
+  font-weight: 600;
+}
+
+.theme {
+  color: white;
+  background-color: #2a2a2a;
+}

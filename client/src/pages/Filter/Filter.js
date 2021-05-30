@@ -2,13 +2,9 @@ import React from "react";
 import "./Filter.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faDotCircle,
-  faAddressCard,
-} from "@fortawesome/free-regular-svg-icons";
-import {
   faPlay,
   faVolleyballBall,
-  faPlus,
+  faPlusCircle,
   faHeart,
   faCode,
   faGlobeAmericas,
@@ -44,7 +40,7 @@ function Filter() {
       </div>
       <div className="btn">
         <div className="btn--icon">
-          <FontAwesomeIcon icon={faPlus} />
+          <FontAwesomeIcon icon={faPlusCircle} />
         </div>
         <div className="btn--name">Health</div>
       </div>

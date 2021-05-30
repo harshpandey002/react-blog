@@ -1,15 +1,29 @@
 import React from "react";
 import "./Nav.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircle } from "@fortawesome/free-regular-svg-icons";
+import { faPlus, faRandom, faAdjust } from "@fortawesome/free-solid-svg-icons";
 
 function Nav() {
   return (
     <div className="Nav">
-      <p>Nav Item 1</p>
-      <p>Nav Item 2</p>
-      <p>Nav Item 3</p>
-      <p>Nav Item 4</p>
+      <div className="btn">
+        <div className="btn--icon">
+          <FontAwesomeIcon icon={faPlus} />
+        </div>
+        <div className="btn--name">Create Blog</div>
+      </div>
+      <div className="btn">
+        <div className="btn--icon">
+          <FontAwesomeIcon icon={faRandom} />
+        </div>
+        <div className="btn--name">Random Data</div>
+      </div>
+      <div className="btn theme">
+        <div className="btn--icon">
+          <FontAwesomeIcon icon={faAdjust} />
+        </div>
+        <div className="btn--name">Switch Theme</div>
+      </div>
     </div>
   );
 }
