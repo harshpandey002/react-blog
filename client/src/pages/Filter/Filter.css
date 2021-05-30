@@ -1,13 +1,8 @@
-.Filter {
-  background-color: var(--fg-color);
-  border-radius: var(--bd-radius);
-  box-shadow: var(--bx-shadow);
-  color: var(--ft-color);
-  flex: var(--lt-flex);
-  top: var(--sticky);
-  display: flex;
-  flex-direction: column;
-  position: sticky;
-  height: max-content;
-  gap: 15px;
+.Filter .btn:hover .btn--icon {
+  background-color: var(--ic-bg-color);
+  margin-right: 5px;
+}
+.Filter .btn:hover {
+  color: black;
+  font-weight: 600;
 }

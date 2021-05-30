@@ -5,15 +5,60 @@ import {
   faDotCircle,
   faAddressCard,
 } from "@fortawesome/free-regular-svg-icons";
+import {
+  faPlay,
+  faVolleyballBall,
+  faPlus,
+  faHeart,
+  faCode,
+  faGlobeAmericas,
+  faIdCard,
+} from "@fortawesome/free-solid-svg-icons";
 
 function Filter() {
   return (
     <div className="Filter">
       <div className="btn">
         <div className="btn--icon">
-          <FontAwesomeIcon icon={faDotCircle} />
+          <FontAwesomeIcon icon={faGlobeAmericas} />
         </div>
         <div className="btn--name">Global</div>
+      </div>
+      <div className="btn">
+        <div className="btn--icon">
+          <FontAwesomeIcon icon={faIdCard} />
+        </div>
+        <div className="btn--name">Business</div>
+      </div>
+      <div className="btn">
+        <div className="btn--icon">
+          <FontAwesomeIcon icon={faPlay} />
+        </div>
+        <div className="btn--name">Entertainment</div>
+      </div>
+      <div className="btn">
+        <div className="btn--icon">
+          <FontAwesomeIcon icon={faVolleyballBall} />
+        </div>
+        <div className="btn--name">Sports</div>
+      </div>
+      <div className="btn">
+        <div className="btn--icon">
+          <FontAwesomeIcon icon={faPlus} />
+        </div>
+        <div className="btn--name">Health</div>
+      </div>
+      <div className="btn">
+        <div className="btn--icon">
+          <FontAwesomeIcon icon={faCode} />
+        </div>
+        <div className="btn--name">Programming</div>
+      </div>
+      <div className="btn">
+        <div className="btn--icon">
+          <FontAwesomeIcon icon={faHeart} />
+        </div>
+        <div className="btn--name">Favourite</div>
       </div>
     </div>
   );

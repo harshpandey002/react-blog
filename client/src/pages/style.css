@@ -16,16 +16,34 @@
   padding: var(--padding);
 }
 
+.Filter,
+.Nav,
+.Action,
+.Form {
+  background-color: var(--fg-color);
+  border-radius: var(--bd-radius);
+  box-shadow: var(--bx-shadow);
+  color: var(--ft-color);
+  flex: var(--lt-flex);
+  top: var(--sticky);
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  height: max-content;
+  gap: 15px;
+}
+
 .btn {
   display: flex;
   align-items: center;
-  gap: 10px;
+  cursor: pointer;
+  gap: 5px;
 }
 
 .btn--icon {
-  background-color: var(--ic-bg-color);
   padding: var(--ic-padding);
   border-radius: var(--ic-bd-radius);
   width: 40px;
   height: 40px;
+  transition: all 0.3s ease;
 }
