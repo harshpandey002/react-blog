@@ -2,6 +2,10 @@
   --bg-color: #f3f3f3;
   --fg-color: rgb(255, 255, 255);
   --bx-shadow: rgba(0, 0, 0, 0.25) 0px 2px 8px 0px;
+  --ft-color: #8b8b8b;
+  --ic-bg-color: #f3f3f3;
+  --ic-padding: 10px;
+  --ic-bd-radius: 10px;
   --bd-radius: 20px;
   --lt-flex: 5;
   --rt-flex: 8;

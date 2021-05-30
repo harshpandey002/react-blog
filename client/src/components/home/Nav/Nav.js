@@ -1,5 +1,7 @@
 import React from "react";
 import "./Nav.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircle } from "@fortawesome/free-regular-svg-icons";
 
 function Nav() {
   return (

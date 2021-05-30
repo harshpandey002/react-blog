@@ -15,3 +15,17 @@
 .Blogs {
   padding: var(--padding);
 }
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn--icon {
+  background-color: var(--ic-bg-color);
+  padding: var(--ic-padding);
+  border-radius: var(--ic-bd-radius);
+  width: 40px;
+  height: 40px;
+}

@@ -2,7 +2,8 @@
   background-color: var(--fg-color);
   border-radius: var(--bd-radius);
   box-shadow: var(--bx-shadow);
-  flex: var(--rt-flex);
+  color: var(--ft-color);
+  flex: var(--lt-flex);
   position: sticky;
   height: max-content;
   top: var(--sticky);
