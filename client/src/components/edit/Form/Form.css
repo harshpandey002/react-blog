@@ -1,0 +1,7 @@
+.inpt {
+  margin-bottom: 1rem;
+  width: 100%;
+}
+.Form {
+  flex: var(--rt-flex);
+}
