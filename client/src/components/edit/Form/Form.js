@@ -6,14 +6,17 @@ import FormControl from "@material-ui/core/FormControl";
 import InputLabel from "@material-ui/core/InputLabel";
 import Select from "@material-ui/core/Select";
 import Button from "@material-ui/core/Button";
+import ButtonGroup from "@material-ui/core/ButtonGroup";
 
 import "./Form.css";
 import { faBorderNone } from "@fortawesome/free-solid-svg-icons";
 
 const useStyles = makeStyles({
-  textStyle: {
+  width: {
     width: "100%",
-    textAlign: "center",
+  },
+  flex: {
+    width: "50%",
   },
   formControl: {
     width: "100%",
@@ -22,13 +25,42 @@ const useStyles = makeStyles({
   input: {
     display: "none",
   },
+  upload: {
+    boxShadow:
+      "0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);",
+    borderRadius: "5px 0 0 5px",
+    "&:hover": {
+      background: "#f0f0f0",
+    },
+  },
+  default: {
+    color: "white",
+    background: "#505050",
+    boxShadow:
+      "0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);",
+    borderRadius: "0 5px 5px 0",
+    "&:hover": {
+      background: "#313131",
+      boxShadow:
+        "0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);",
+    },
+  },
+  cta: {
+    background: "white",
+    flex: 1,
+    "&:hover": {
+      background: "#f0f0f0",
+      boxShadow:
+        "0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);",
+    },
+  },
 });
 
 function Form() {
   const [blog, setBlog] = useState({ title: "", category: "", thumbnail: "" });
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(e);
+    clear();
   };
 
   const uploadImage = async (e) => {
@@ -52,6 +84,10 @@ function Form() {
     });
   };
 
+  const clear = () => {
+    setBlog({ title: "", category: "", thumbnail: "" });
+  };
+
   const classes = useStyles();
 
   return (
@@ -59,12 +95,13 @@ function Form() {
       <form autoComplete="off" onSubmit={handleSubmit}>
         <div className="inpt">
           <TextField
-            className={classes.textStyle}
+            className={classes.width}
             value={blog.title}
             onChange={(e) => setBlog({ ...blog, title: e.target.value })}
             id="outlined-basic"
             label="Title"
             variant="outlined"
+            required
             // inputProps={{
             //   style: {
             //     padding: "10px 14px",
@@ -73,7 +110,11 @@ function Form() {
           />
         </div>
         <div className="inpt">
-          <FormControl variant="outlined" className={classes.formControl}>
+          <FormControl
+            required
+            variant="outlined"
+            className={classes.formControl}
+          >
             <InputLabel id="select">Category</InputLabel>
             <Select
               labelId="select"
@@ -94,7 +135,7 @@ function Form() {
           </FormControl>
         </div>
 
-        <div className="uploadBTn">
+        <div className={`${classes.width} inpt`}>
           <input
             accept="image/*"
             className={classes.input}
@@ -104,18 +145,32 @@ function Form() {
             }}
             type="file"
           />
+
           <label htmlFor="contained-button-file">
-            <Button variant="outlined" component="span">
-              Upload
+            <Button
+              className={`${classes.flex} ${classes.upload}`}
+              component="span"
+            >
+              Upload Image
             </Button>
           </label>
+
+          <Button className={`${classes.flex} ${classes.default}`}>
+            Set Default
+          </Button>
         </div>
 
-        <Button type="submit" variant="outlined">
-          Save
-        </Button>
-        <Button variant="outlined">Clear</Button>
-        <Button variant="outlined">Discard</Button>
+        <div className="ctaBtn">
+          <Button className={classes.cta} type="submit" variant="contained">
+            Save
+          </Button>
+          <Button className={classes.cta} onClick={clear} variant="contained">
+            Clear
+          </Button>
+          <Button className={classes.cta} variant="contained">
+            Discard
+          </Button>
+        </div>
       </form>
     </div>
   );

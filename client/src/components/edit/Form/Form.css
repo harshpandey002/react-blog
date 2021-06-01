@@ -1,7 +1,18 @@
+.Form {
+  flex: var(--rt-flex);
+}
+
 .inpt {
   margin-bottom: 1rem;
   width: 100%;
 }
-.Form {
-  flex: var(--rt-flex);
+
+.inpt:nth-child(3) {
+  margin-bottom: 3rem;
+}
+
+.ctaBtn {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
 }
