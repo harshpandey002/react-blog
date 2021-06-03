@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import MenuItem from "@material-ui/core/MenuItem";
@@ -7,6 +7,8 @@ import InputLabel from "@material-ui/core/InputLabel";
 import Select from "@material-ui/core/Select";
 import Button from "@material-ui/core/Button";
 import { ToastContainer, toast } from "react-toastify";
+
+import { useParams, useHistory } from "react-router-dom";
 
 import "react-toastify/dist/ReactToastify.css";
 import "./Form.css";
@@ -57,6 +59,15 @@ const useStyles = makeStyles({
 });
 
 function Form({ blog, setBlog }) {
+  let params = useParams();
+  let history = useHistory();
+
+  useEffect(() => {
+    // console.log(params.id);
+    // console.log(history);
+    setBlog({ ...blog, id: params.id });
+  }, []);
+
   const uploadImage = async (e) => {
     const file = e.target.files[0];
     const base64 = await convertBase64(file);
@@ -81,6 +92,12 @@ function Form({ blog, setBlog }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     clear("Saved");
+    history.goBack();
+  };
+
+  const handleDiscard = (e) => {
+    clear("Discarded");
+    history.goBack();
   };
 
   const clear = (messege) => {
@@ -184,7 +201,11 @@ function Form({ blog, setBlog }) {
           >
             Clear
           </Button>
-          <Button className={classes.cta} variant="contained">
+          <Button
+            onClick={handleDiscard}
+            className={classes.cta}
+            variant="contained"
+          >
             Discard
           </Button>
         </div>

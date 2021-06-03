@@ -7,6 +7,7 @@ import "../style.css";
 
 function Edit() {
   const [blog, setBlog] = useState({
+    id: "",
     title: "",
     category: "",
     thumbnail: "",
