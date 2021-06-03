@@ -7,7 +7,6 @@ import "./Editor.css";
 function Editor({ blog, setBlog }) {
   const modules = {
     toolbar: [
-      [{ size: [false, "large"] }],
       [{ header: 1 }, { header: 2 }],
       ["bold", "italic", "underline", "strike", "blockquote", "code-block"],
       [
@@ -26,8 +25,8 @@ function Editor({ blog, setBlog }) {
         theme="snow"
         placeholder="Start typing here..."
         modules={modules}
-        value={blog.description}
-        onChange={(e) => setBlog({ ...blog, description: e })}
+        value={blog.blogData}
+        onChange={(e) => setBlog({ ...blog, blogData: e })}
       />
     </div>
   );

@@ -13,7 +13,23 @@
   min-height: 75vh;
 }
 
-.ql-toolbar.ql-snow,
+.ql-toolbar.ql-snow {
+  border: none;
+}
 .ql-container.ql-snow {
   border: none;
+}
+
+.ql-editor {
+  font-size: 1rem;
+}
+
+.ql-editor h1 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.ql-editor h2 {
+  font-weight: 500;
+  margin: 0.5rem 0;
 }

@@ -17,36 +17,12 @@ const useStyles = makeStyles({
   width: {
     width: "100%",
   },
-  flex: {
-    width: "50%",
-  },
+
   formControl: {
     width: "100%",
     textAlign: "left",
   },
-  input: {
-    display: "none",
-  },
-  upload: {
-    boxShadow:
-      "0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);",
-    borderRadius: "5px 0 0 5px",
-    "&:hover": {
-      background: "#f0f0f0",
-    },
-  },
-  default: {
-    color: "white",
-    background: "#505050",
-    boxShadow:
-      "0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);",
-    borderRadius: "0 5px 5px 0",
-    "&:hover": {
-      background: "#313131",
-      boxShadow:
-        "0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);",
-    },
-  },
+
   cta: {
     background: "white",
     flex: 1,
@@ -68,27 +44,6 @@ function Form({ blog, setBlog }) {
     setBlog({ ...blog, id: params.id });
   }, []);
 
-  const uploadImage = async (e) => {
-    const file = e.target.files[0];
-    const base64 = await convertBase64(file);
-    setBlog({ ...blog, thumbnail: base64 });
-  };
-
-  const convertBase64 = (file) => {
-    return new Promise((resolve, reject) => {
-      const fileReader = new FileReader();
-      fileReader.readAsDataURL(file);
-
-      fileReader.onload = () => {
-        resolve(fileReader.result);
-      };
-
-      fileReader.onerror = (error) => {
-        reject(error);
-      };
-    });
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
     clear("Saved");
@@ -101,8 +56,8 @@ function Form({ blog, setBlog }) {
   };
 
   const clear = (messege) => {
-    setBlog({ ...blog, description: "" });
-    setBlog({ ...blog, title: "", category: "", thumbnail: "" });
+    setBlog({ ...blog, blogData: "" });
+    setBlog({ ...blog, title: "", category: "", description: "" });
     notify(messege);
   };
 
@@ -132,13 +87,22 @@ function Form({ blog, setBlog }) {
             label="Title"
             variant="outlined"
             required
-            // inputProps={{
-            //   style: {
-            //     padding: "10px 14px",
-            //   },
-            // }}
           />
         </div>
+
+        <div className="inpt">
+          <TextField
+            id="outlined-multiline-static"
+            className={classes.width}
+            value={blog.description}
+            onChange={(e) => setBlog({ ...blog, description: e.target.value })}
+            label="Description"
+            multiline
+            rows={3}
+            variant="outlined"
+          />
+        </div>
+
         <div className="inpt">
           <FormControl
             required
@@ -163,31 +127,6 @@ function Form({ blog, setBlog }) {
               <MenuItem value="programming">Programming</MenuItem>
             </Select>
           </FormControl>
-        </div>
-
-        <div className={`${classes.width} inpt`}>
-          <input
-            accept="image/*"
-            className={classes.input}
-            id="contained-button-file"
-            onChange={(e) => {
-              uploadImage(e);
-            }}
-            type="file"
-          />
-
-          <label htmlFor="contained-button-file">
-            <Button
-              className={`${classes.flex} ${classes.upload}`}
-              component="span"
-            >
-              Upload Image
-            </Button>
-          </label>
-
-          <Button className={`${classes.flex} ${classes.default}`}>
-            Set Default
-          </Button>
         </div>
 
         <div className="ctaBtn">

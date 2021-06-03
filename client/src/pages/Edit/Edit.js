@@ -9,9 +9,9 @@ function Edit() {
   const [blog, setBlog] = useState({
     id: "",
     title: "",
-    category: "",
-    thumbnail: "",
     description: "",
+    category: "",
+    blogData: "",
   });
 
   return (
