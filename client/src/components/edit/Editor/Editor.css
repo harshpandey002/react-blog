@@ -4,4 +4,16 @@
   box-shadow: var(--bx-shadow);
   flex: var(--ct-flex);
   height: max-content;
+  width: 40vw;
+}
+
+.ql-snow .ql-editor {
+  font-family: "Montserrat", sans-serif;
+  padding-top: 2rem;
+  min-height: 75vh;
+}
+
+.ql-toolbar.ql-snow,
+.ql-container.ql-snow {
+  border: none;
 }

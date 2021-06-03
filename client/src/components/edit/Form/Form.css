@@ -16,3 +16,10 @@
   justify-content: space-between;
   gap: 5px;
 }
+
+.Toastify__toast--dark {
+  background-color: #313131 !important;
+}
+.Toastify__toast-body {
+  background-color: #313131;
+}

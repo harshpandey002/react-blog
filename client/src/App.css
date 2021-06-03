@@ -31,6 +31,23 @@ body {
   font-size: 1.1rem;
 }
 
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
 .App {
   padding: 50px;
+  max-width: 1600px;
+  margin: auto;
 }

@@ -1,5 +1,4 @@
-import React from "react";
-import Filter from "../Filter/Filter";
+import React, { useState } from "react";
 import Editor from "../../components/edit/Editor/Editor";
 import Form from "../../components/edit/Form/Form";
 
@@ -7,11 +6,18 @@ import "./Edit.css";
 import "../style.css";
 
 function Edit() {
+  const [blog, setBlog] = useState({
+    title: "",
+    category: "",
+    thumbnail: "",
+    description: "",
+  });
+
   return (
     <div className="Page">
-      <Filter />
-      <Editor />
-      <Form />
+      <div className="empty"></div>
+      <Editor blog={blog} setBlog={setBlog} />
+      <Form blog={blog} setBlog={setBlog} />
     </div>
   );
 }

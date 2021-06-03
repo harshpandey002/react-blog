@@ -1,19 +1,34 @@
 import React from "react";
+import ReactQuill from "react-quill";
+import "react-quill/dist/quill.snow.css";
+
 import "./Editor.css";
 
-function Editor() {
+function Editor({ blog, setBlog }) {
+  const modules = {
+    toolbar: [
+      [{ size: [false, "large"] }],
+      [{ header: 1 }, { header: 2 }],
+      ["bold", "italic", "underline", "strike", "blockquote", "code-block"],
+      [
+        { list: "ordered" },
+        { list: "bullet" },
+        { indent: "-1" },
+        { indent: "+1" },
+      ],
+      ["link", "image", "video"],
+    ],
+  };
+
   return (
     <div className="Editor">
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id vero minima
-        voluptatibus, libero asperiores incidunt rerum blanditiis voluptates
-        error ratione. Tempore possimus eveniet voluptatum ut deleniti impedit,
-        excepturi nostrum sequi. Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Quibusdam aliquam accusantium doloremque, commodi
-        possimus tenetur dolore exercitationem ipsum veniam esse repellendus.
-        Excepturi, tenetur nesciunt expedita sint quas necessitatibus ea
-        deserunt.
-      </p>
+      <ReactQuill
+        theme="snow"
+        placeholder="Start typing here..."
+        modules={modules}
+        value={blog.description}
+        onChange={(e) => setBlog({ ...blog, description: e })}
+      />
     </div>
   );
 }

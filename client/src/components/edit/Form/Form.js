@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import MenuItem from "@material-ui/core/MenuItem";
@@ -6,10 +6,10 @@ import FormControl from "@material-ui/core/FormControl";
 import InputLabel from "@material-ui/core/InputLabel";
 import Select from "@material-ui/core/Select";
 import Button from "@material-ui/core/Button";
-import ButtonGroup from "@material-ui/core/ButtonGroup";
+import { ToastContainer, toast } from "react-toastify";
 
+import "react-toastify/dist/ReactToastify.css";
 import "./Form.css";
-import { faBorderNone } from "@fortawesome/free-solid-svg-icons";
 
 const useStyles = makeStyles({
   width: {
@@ -56,13 +56,7 @@ const useStyles = makeStyles({
   },
 });
 
-function Form() {
-  const [blog, setBlog] = useState({ title: "", category: "", thumbnail: "" });
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    clear();
-  };
-
+function Form({ blog, setBlog }) {
   const uploadImage = async (e) => {
     const file = e.target.files[0];
     const base64 = await convertBase64(file);
@@ -84,11 +78,30 @@ function Form() {
     });
   };
 
-  const clear = () => {
-    setBlog({ title: "", category: "", thumbnail: "" });
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    clear("Saved");
+  };
+
+  const clear = (messege) => {
+    setBlog({ ...blog, description: "" });
+    setBlog({ ...blog, title: "", category: "", thumbnail: "" });
+    notify(messege);
   };
 
   const classes = useStyles();
+
+  const notify = (messege) => {
+    toast.dark(messege, {
+      position: "bottom-right",
+      autoClose: 3000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+  };
 
   return (
     <div className="Form">
@@ -164,7 +177,11 @@ function Form() {
           <Button className={classes.cta} type="submit" variant="contained">
             Save
           </Button>
-          <Button className={classes.cta} onClick={clear} variant="contained">
+          <Button
+            className={classes.cta}
+            onClick={() => clear("Cleared")}
+            variant="contained"
+          >
             Clear
           </Button>
           <Button className={classes.cta} variant="contained">
@@ -172,6 +189,17 @@ function Form() {
           </Button>
         </div>
       </form>
+      <ToastContainer
+        position="bottom-right"
+        autoClose={3000}
+        hideProgressBar
+        newestOnTop
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </div>
   );
 }
