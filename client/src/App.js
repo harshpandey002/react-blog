@@ -1,7 +1,11 @@
-import "./App.css";
+import { useEffect } from "react";
 import Home from "./pages/Home/Home";
 import Edit from "./pages/Edit/Edit";
 import Blog from "./pages/Blog/Blog";
+
+//Redux
+import { useDispatch } from "react-redux";
+import { getStory } from "./actions/story";
 
 //Router
 import {
@@ -11,7 +15,13 @@ import {
   Redirect,
 } from "react-router-dom";
 
+import "./App.css";
+
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getStory());
+  }, [dispatch]);
   return (
     <Router>
       <div className="App">

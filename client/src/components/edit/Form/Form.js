@@ -7,11 +7,12 @@ import InputLabel from "@material-ui/core/InputLabel";
 import Select from "@material-ui/core/Select";
 import Button from "@material-ui/core/Button";
 import { ToastContainer, toast } from "react-toastify";
-
+import { createStory } from "../../../actions/story";
 import { useParams, useHistory } from "react-router-dom";
 
 import "react-toastify/dist/ReactToastify.css";
 import "./Form.css";
+import { useDispatch } from "react-redux";
 
 const useStyles = makeStyles({
   width: {
@@ -35,6 +36,7 @@ const useStyles = makeStyles({
 });
 
 function Form({ blog, setBlog }) {
+  const dispatch = useDispatch();
   let params = useParams();
   let history = useHistory();
 
@@ -46,6 +48,7 @@ function Form({ blog, setBlog }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    dispatch(createStory(blog));
     clear("Saved");
     history.goBack();
   };
@@ -56,9 +59,8 @@ function Form({ blog, setBlog }) {
   };
 
   const clear = (messege) => {
-    setBlog({ ...blog, blogData: "" });
     setBlog({ ...blog, title: "", category: "", description: "" });
-    notify(messege);
+    // notify(messege);
   };
 
   const classes = useStyles();

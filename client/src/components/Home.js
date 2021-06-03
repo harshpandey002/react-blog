@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { loadGames } from "../actions/gamesAction";
+import { loadGames } from "../actions/story";
 
 function Home() {
   const dispatch = useDispatch();

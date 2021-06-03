@@ -9,13 +9,6 @@ function Main() {
       <Info />
       <div className="blogs">
         <Blogs />
-        <Blogs />
-        <Blogs />
-        <Blogs />
-        <Blogs />
-        <Blogs />
-        <Blogs />
-        <Blogs />
       </div>
     </div>
   );
