@@ -1,19 +1,35 @@
 import React from "react";
+
+//Quill
+import ReactQuill from "react-quill";
+import "react-quill/dist/quill.snow.css";
+
+//Router
+import { useParams } from "react-router-dom";
+
+//Redux
+import { useSelector } from "react-redux";
+
 import "./BlogDetails.css";
 
 function BlogDetails() {
+  const params = useParams();
+  const story = useSelector((state) =>
+    state.story.filter((post) => {
+      if (post.id === params.id) {
+        return post;
+      }
+    })
+  )[0];
+
   return (
     <div className="BlogDetails">
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id vero minima
-        voluptatibus, libero asperiores incidunt rerum blanditiis voluptates
-        error ratione. Tempore possimus eveniet voluptatum ut deleniti impedit,
-        excepturi nostrum sequi. Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Quibusdam aliquam accusantium doloremque, commodi
-        possimus tenetur dolore exercitationem ipsum veniam esse repellendus.
-        Excepturi, tenetur nesciunt expedita sint quas necessitatibus ea
-        deserunt.
-      </p>
+      <ReactQuill
+        // theme="snow"
+        readOnly
+        modules={{ toolbar: [] }}
+        value={story.blogData}
+      />
     </div>
   );
 }

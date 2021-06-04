@@ -12,7 +12,7 @@ import { useParams, useHistory } from "react-router-dom";
 
 import "react-toastify/dist/ReactToastify.css";
 import "./Form.css";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 const useStyles = makeStyles({
   width: {
@@ -40,10 +40,21 @@ function Form({ blog, setBlog }) {
   let params = useParams();
   let history = useHistory();
 
+  const story = useSelector((state) =>
+    state.story.filter((post) => {
+      if (post.id === params.id) {
+        return post;
+      }
+    })
+  )[0];
+
   useEffect(() => {
-    // console.log(params.id);
-    // console.log(history);
-    setBlog({ ...blog, id: params.id });
+    if (story) {
+      setBlog(story);
+      console.log("Problem");
+    } else {
+      setBlog({ ...blog, id: params.id });
+    }
   }, []);
 
   const handleSubmit = (e) => {

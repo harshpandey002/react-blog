@@ -1,15 +1,20 @@
 import React from "react";
 import { useParams, useHistory } from "react-router-dom";
-import "./Action.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeart, faTrash, faPen } from "@fortawesome/free-solid-svg-icons";
+import {
+  faHeart,
+  faTrash,
+  faPen,
+  faHome,
+} from "@fortawesome/free-solid-svg-icons";
+
+import "./Action.css";
 
 function Action() {
   let params = useParams();
   let history = useHistory();
 
   const editHandler = () => {
-    console.log("hello");
     history.push(`/edit/${params.id}`);
   };
 
@@ -32,6 +37,12 @@ function Action() {
           <FontAwesomeIcon icon={faTrash} />
         </div>
         <div className="btn--name">Delete Blog</div>
+      </div>
+      <div onClick={() => history.goBack()} className="btn">
+        <div className="btn--icon">
+          <FontAwesomeIcon icon={faHome} />
+        </div>
+        <div className="btn--name">Home</div>
       </div>
     </div>
   );
