@@ -11,8 +11,7 @@
 .Form,
 .Editor,
 .Info,
-.BlogDetails,
-.Blogs {
+.BlogDetails {
   padding: var(--padding);
 }
 
