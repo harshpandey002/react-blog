@@ -1,4 +1,3 @@
-import axios from "axios";
 import { CREATE, FETCH_ALL } from "../constants/actionTypes";
 
 //Action Creator

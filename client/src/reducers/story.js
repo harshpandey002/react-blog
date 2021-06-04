@@ -1,9 +1,9 @@
 import {
   FETCH_ALL,
   CREATE,
-  UPDATE,
-  DELETE,
-  LIKE,
+  // UPDATE,
+  // DELETE,
+  // LIKE,
 } from "../constants/actionTypes";
 
 const story = (story = [], action) => {

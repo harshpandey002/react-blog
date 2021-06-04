@@ -3,4 +3,12 @@
   border-radius: var(--bd-radius);
   box-shadow: var(--bx-shadow);
   height: 220px;
+  cursor: pointer;
+}
+
+.Blogs {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  grid-gap: 30px;
 }

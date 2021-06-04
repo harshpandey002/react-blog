@@ -6,7 +6,7 @@ import FormControl from "@material-ui/core/FormControl";
 import InputLabel from "@material-ui/core/InputLabel";
 import Select from "@material-ui/core/Select";
 import Button from "@material-ui/core/Button";
-import { ToastContainer, toast } from "react-toastify";
+// import { ToastContainer, toast } from "react-toastify";
 import { createStory } from "../../../actions/story";
 import { useParams, useHistory } from "react-router-dom";
 
@@ -65,17 +65,17 @@ function Form({ blog, setBlog }) {
 
   const classes = useStyles();
 
-  const notify = (messege) => {
-    toast.dark(messege, {
-      position: "bottom-right",
-      autoClose: 3000,
-      hideProgressBar: true,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-    });
-  };
+  // const notify = (messege) => {
+  //   toast.dark(messege, {
+  //     position: "bottom-right",
+  //     autoClose: 3000,
+  //     hideProgressBar: true,
+  //     closeOnClick: true,
+  //     pauseOnHover: true,
+  //     draggable: true,
+  //     progress: undefined,
+  //   });
+  // };
 
   return (
     <div className="Form">
@@ -151,7 +151,7 @@ function Form({ blog, setBlog }) {
           </Button>
         </div>
       </form>
-      <ToastContainer
+      {/* <ToastContainer
         position="bottom-right"
         autoClose={3000}
         hideProgressBar
@@ -161,7 +161,7 @@ function Form({ blog, setBlog }) {
         pauseOnFocusLoss
         draggable
         pauseOnHover
-      />
+      /> */}
     </div>
   );
 }
