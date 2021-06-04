@@ -7,7 +7,7 @@ import InputLabel from "@material-ui/core/InputLabel";
 import Select from "@material-ui/core/Select";
 import Button from "@material-ui/core/Button";
 // import { ToastContainer, toast } from "react-toastify";
-import { createStory } from "../../../actions/story";
+import { createStory, updateStory } from "../../../actions/story";
 import { useParams, useHistory } from "react-router-dom";
 
 import "react-toastify/dist/ReactToastify.css";
@@ -40,7 +40,7 @@ function Form({ blog, setBlog }) {
   let params = useParams();
   let history = useHistory();
 
-  const story = useSelector((state) =>
+  let post = useSelector((state) =>
     state.story.filter((post) => {
       if (post.id === params.id) {
         return post;
@@ -49,17 +49,28 @@ function Form({ blog, setBlog }) {
   )[0];
 
   useEffect(() => {
-    if (story) {
-      setBlog(story);
-      console.log("Problem");
-    } else {
-      setBlog({ ...blog, id: params.id });
+    console.log("useEffect Post: ", post);
+    setBlog({
+      ...blog,
+      id: params.id,
+    });
+
+    if (post) {
+      setBlog((blog) => ({
+        ...post,
+      }));
     }
-  }, []);
+  }, [blog.id]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(createStory(blog));
+    if (post) {
+      console.log("UPDATE: ", blog);
+      dispatch(updateStory(blog));
+    } else {
+      console.log("CREATE: ", blog);
+      dispatch(createStory(blog));
+    }
     clear("Saved");
     history.goBack();
   };
