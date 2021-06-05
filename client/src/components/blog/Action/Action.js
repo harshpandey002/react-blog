@@ -13,6 +13,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { addFav, unFav } from "../../../actions/fav";
 
 import "./Action.css";
+import { deleteStory } from "../../../actions/story";
 
 function Action() {
   let params = useParams();
@@ -51,13 +52,20 @@ function Action() {
         </div>
         <div className="btn--name">Edit Blog</div>
       </div>
-      <div className="btn">
+      <div
+        onClick={() => {
+          dispatch(deleteStory(story.id));
+          dispatch(unFav(story.id));
+          history.goBack();
+        }}
+        className="btn"
+      >
         <div className="btn--icon">
           <FontAwesomeIcon icon={faTrash} />
         </div>
         <div className="btn--name">Delete Blog</div>
       </div>
-      <div onClick={() => history.goBack()} className="btn">
+      <div onClick={() => history.push("/home")} className="btn">
         <div className="btn--icon">
           <FontAwesomeIcon icon={faHome} />
         </div>

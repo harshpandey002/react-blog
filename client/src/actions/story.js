@@ -1,4 +1,4 @@
-import { FETCH_ALL, CREATE, UPDATE } from "../constants/actionTypes";
+import { FETCH_ALL, CREATE, UPDATE, DELETE } from "../constants/actionTypes";
 
 //Action Creator
 
@@ -12,4 +12,8 @@ export const createStory = (story) => async (dispatch) => {
 
 export const updateStory = (story) => async (dispatch) => {
   dispatch({ type: UPDATE, payload: story });
+};
+
+export const deleteStory = (id) => async (dispatch) => {
+  dispatch({ type: DELETE, payload: id });
 };

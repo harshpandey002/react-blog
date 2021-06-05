@@ -2,7 +2,7 @@ import {
   FETCH_ALL,
   CREATE,
   UPDATE,
-  // DELETE,
+  DELETE,
   // LIKE,
 } from "../constants/actionTypes";
 
@@ -16,6 +16,8 @@ const story = (story = [], action) => {
       return story.map((post) =>
         post.id === action.payload.id ? action.payload : post
       );
+    case DELETE:
+      return story.filter((post) => post.id !== action.payload);
     default:
       return [...story];
   }

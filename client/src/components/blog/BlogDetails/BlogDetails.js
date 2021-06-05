@@ -28,7 +28,7 @@ function BlogDetails() {
         // theme="snow"
         readOnly
         modules={{ toolbar: [] }}
-        value={story.blogData}
+        value={story ? story.blogData : " "}
       />
     </div>
   );
