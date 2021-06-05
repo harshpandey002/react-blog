@@ -53,6 +53,7 @@ function Form({ blog, setBlog }) {
     setBlog({
       ...blog,
       id: params.id,
+      like: false,
     });
 
     if (post) {

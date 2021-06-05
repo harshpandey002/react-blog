@@ -3,7 +3,7 @@ import {
   CREATE,
   UPDATE,
   DELETE,
-  // LIKE,
+  LIKE,
 } from "../constants/actionTypes";
 
 const story = (story = [], action) => {
@@ -16,6 +16,15 @@ const story = (story = [], action) => {
       return story.map((post) =>
         post.id === action.payload.id ? action.payload : post
       );
+    case LIKE:
+      return story.map((post) => {
+        if (post.id === action.payload) {
+          post.like = !post.like;
+          return post;
+        } else {
+          return post;
+        }
+      });
     case DELETE:
       return story.filter((post) => post.id !== action.payload);
     default:

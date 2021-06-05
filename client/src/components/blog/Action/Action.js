@@ -10,10 +10,9 @@ import {
 
 //Redux
 import { useDispatch, useSelector } from "react-redux";
-import { addFav, unFav } from "../../../actions/fav";
+import { deleteStory, likeStory } from "../../../actions/story";
 
 import "./Action.css";
-import { deleteStory } from "../../../actions/story";
 
 function Action() {
   let params = useParams();
@@ -27,20 +26,13 @@ function Action() {
     history.push(`/edit/${params.id}`);
   };
 
-  const favHandler = (e) => {
-    const button = e.currentTarget;
-    if (button.classList.contains("liked")) {
-      dispatch(unFav(story.id));
-      button.classList.remove("liked");
-    } else {
-      dispatch(addFav(story));
-      button.classList.add("liked");
-    }
+  const favHandler = () => {
+    dispatch(likeStory(story.id));
   };
 
   return (
     <div className="Action">
-      <div onClick={(e) => favHandler(e)} className="btn">
+      <div onClick={favHandler} className="btn">
         <div className="btn--icon">
           <FontAwesomeIcon icon={faHeart} />
         </div>
@@ -55,7 +47,6 @@ function Action() {
       <div
         onClick={() => {
           dispatch(deleteStory(story.id));
-          dispatch(unFav(story.id));
           history.goBack();
         }}
         className="btn"

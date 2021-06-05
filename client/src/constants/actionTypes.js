@@ -3,8 +3,3 @@ export const CREATE = "CREATE";
 export const UPDATE = "UPDATE";
 export const DELETE = "DELETE";
 export const LIKE = "LIKE";
-
-//Fav
-export const GET_FAV = "GET_FAV";
-export const FAV = "FAV";
-export const UNFAV = "UNFAV";
