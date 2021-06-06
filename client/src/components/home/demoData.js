@@ -5,6 +5,7 @@ export const demoData = [
     description: "Demo description 1",
     category: "entertainment",
     blogData: "<h1>Demo Story 1</h1>",
+    created: Date(),
     like: false,
   },
   {
@@ -13,6 +14,7 @@ export const demoData = [
     description: "Demo description 2",
     category: "health",
     blogData: "<h1>Demo Story 2</h1>",
+    created: Date(),
     like: false,
   },
   {
@@ -21,6 +23,7 @@ export const demoData = [
     description: "Demo description 3",
     category: "programming",
     blogData: "<h1>Demo Story 3</h1>",
+    created: Date(),
     like: false,
   },
   {
@@ -29,6 +32,7 @@ export const demoData = [
     description: "Demo description 4",
     category: "health",
     blogData: "<h1>Demo Story 4</h1>",
+    created: Date(),
     like: false,
   },
   {
@@ -37,6 +41,7 @@ export const demoData = [
     description: "Demo description 5",
     category: "programming",
     blogData: "<h1>Demo Story 5</h1>",
+    created: Date(),
     like: false,
   },
   {
@@ -45,6 +50,7 @@ export const demoData = [
     description: "Demo description 6",
     category: "programming",
     blogData: "<h1>Demo Story 6</h1>",
+    created: Date(),
     like: false,
   },
   {
@@ -53,6 +59,7 @@ export const demoData = [
     description: "Demo description 7",
     category: "health",
     blogData: "<h1>Demo Story 7</h1>",
+    created: Date(),
     like: false,
   },
   {
@@ -61,6 +68,7 @@ export const demoData = [
     description: "Demo description 8",
     category: "health",
     blogData: "<h1>Demo Story 8</h1>",
+    created: Date(),
     like: false,
   },
   {
@@ -69,6 +77,7 @@ export const demoData = [
     description: "Demo description 9",
     category: "programming",
     blogData: "<h1>Demo Story 9</h1>",
+    created: Date(),
     like: false,
   },
   {
@@ -77,6 +86,7 @@ export const demoData = [
     description: "Demo description 10",
     category: "health",
     blogData: "<h1>Demo Story 10</h1>",
+    created: Date(),
     like: false,
   },
   {
@@ -85,6 +95,7 @@ export const demoData = [
     description: "Demo description 11",
     category: "sports",
     blogData: "<h1>Demo Story 11</h1>",
+    created: Date(),
     like: false,
   },
   {
@@ -93,6 +104,7 @@ export const demoData = [
     description: "Demo description 12",
     category: "programming",
     blogData: "<h1>Demo Story 12</h1>",
+    created: Date(),
     like: false,
   },
   {
@@ -101,6 +113,7 @@ export const demoData = [
     description: "Demo description 13",
     category: "sports",
     blogData: "<h1>Demo Story 13</h1>",
+    created: Date(),
     like: false,
   },
   {
@@ -109,6 +122,7 @@ export const demoData = [
     description: "Demo description 14",
     category: "health",
     blogData: "<h1>Demo Story 14</h1>",
+    created: Date(),
     like: false,
   },
   {
@@ -117,6 +131,7 @@ export const demoData = [
     description: "Demo description 15",
     category: "sports",
     blogData: "<h1>Demo Story 15</h1>",
+    created: Date(),
     like: false,
   },
   {
@@ -125,6 +140,7 @@ export const demoData = [
     description: "Demo description 16",
     category: "entertainment",
     blogData: "<h1>Demo Story 16</h1>",
+    created: Date(),
     like: false,
   },
   {
@@ -133,6 +149,7 @@ export const demoData = [
     description: "Demo description 17",
     category: "sports",
     blogData: "<h1>Demo Story 17</h1>",
+    created: Date(),
     like: false,
   },
   {
@@ -141,6 +158,7 @@ export const demoData = [
     description: "Demo description 18",
     category: "business",
     blogData: "<h1>Demo Story 18</h1>",
+    created: Date(),
     like: false,
   },
   {
@@ -149,6 +167,7 @@ export const demoData = [
     description: "Demo description 19",
     category: "entertainment",
     blogData: "<h1>Demo Story 19</h1>",
+    created: Date(),
     like: false,
   },
   {
@@ -157,6 +176,7 @@ export const demoData = [
     description: "Demo description 20",
     category: "sports",
     blogData: "<h1>Demo Story 20</h1>",
+    created: Date(),
     like: false,
   },
   {
@@ -165,6 +185,7 @@ export const demoData = [
     description: "Demo description 21",
     category: "business",
     blogData: "<h1>Demo Story 21</h1>",
+    created: Date(),
     like: false,
   },
   {
@@ -173,6 +194,7 @@ export const demoData = [
     description: "Demo description 22",
     category: "business",
     blogData: "<h1>Demo Story 22</h1>",
+    created: Date(),
     like: false,
   },
   {
@@ -181,6 +203,7 @@ export const demoData = [
     description: "Demo description 23",
     category: "sports",
     blogData: "<h1>Demo Story 23</h1>",
+    created: Date(),
     like: false,
   },
   {
@@ -189,6 +212,7 @@ export const demoData = [
     description: "Demo description 24",
     category: "entertainment",
     blogData: "<h1>Demo Story 24</h1>",
+    created: Date(),
     like: false,
   },
   {
@@ -197,6 +221,7 @@ export const demoData = [
     description: "Demo description 25",
     category: "sports",
     blogData: "<h1>Demo Story 25</h1>",
+    created: Date(),
     like: false,
   },
   {
@@ -205,6 +230,7 @@ export const demoData = [
     description: "Demo description 26",
     category: "business",
     blogData: "<h1>Demo Story 26</h1>",
+    created: Date(),
     like: false,
   },
   {
@@ -213,6 +239,7 @@ export const demoData = [
     description: "Demo description 27",
     category: "entertainment",
     blogData: "<h1>Demo Story 27</h1>",
+    created: Date(),
     like: false,
   },
   {
@@ -221,6 +248,7 @@ export const demoData = [
     description: "Demo description 28",
     category: "entertainment",
     blogData: "<h1>Demo Story 28</h1>",
+    created: Date(),
     like: false,
   },
   {
@@ -229,6 +257,7 @@ export const demoData = [
     description: "Demo description 29",
     category: "business",
     blogData: "<h1>Demo Story 29</h1>",
+    created: Date(),
     like: false,
   },
   {
@@ -237,6 +266,7 @@ export const demoData = [
     description: "Demo description 30",
     category: "entertainment",
     blogData: "<h1>Demo Story 30</h1>",
+    created: Date(),
     like: false,
   },
 ];
