@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Home from "./pages/Home/Home";
 import Edit from "./pages/Edit/Edit";
 import Blog from "./pages/Blog/Blog";
@@ -18,7 +18,9 @@ import {
 import "./App.css";
 
 function App() {
+  const [demo, setDemo] = useState(false);
   const dispatch = useDispatch();
+
   useEffect(() => {
     dispatch(getStory());
   }, [dispatch]);
@@ -26,7 +28,10 @@ function App() {
     <Router>
       <div className="App">
         <Switch>
-          <Route path="/home" component={Home} />
+          <Route
+            path="/home"
+            render={() => <Home demo={demo} setDemo={setDemo} />}
+          />
           <Route path="/blog/:id" component={Blog} />
           <Route path="/edit/:id" component={Edit} />
           <Redirect to="/home" />

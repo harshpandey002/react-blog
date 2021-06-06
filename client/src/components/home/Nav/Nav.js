@@ -1,16 +1,36 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faRandom, faAdjust } from "@fortawesome/free-solid-svg-icons";
 
+import { useDispatch } from "react-redux";
+import { createStory } from "../../../actions/story";
+import { demoData } from "../demoData";
 import "./Nav.css";
 
-function Nav() {
+function Nav({ demo, setDemo }) {
+  const hide = useRef(null);
   let history = useHistory();
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (demo) {
+      hide.current.style.display = "none";
+      return;
+    }
+  }, [demo]);
+
   const handleClick = () => {
     history.push(`/edit/${uuidv4()}`);
+  };
+
+  const demoHandler = () => {
+    setDemo(true);
+    demoData.forEach((post) => {
+      dispatch(createStory(post));
+    });
   };
 
   return (
@@ -21,7 +41,7 @@ function Nav() {
         </div>
         <div className="btn--name">New Story</div>
       </div>
-      <div className="btn">
+      <div ref={hide} onClick={demoHandler} className="btn">
         <div className="btn--icon">
           <FontAwesomeIcon icon={faRandom} />
         </div>
