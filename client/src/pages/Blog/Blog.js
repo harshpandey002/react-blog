@@ -6,10 +6,10 @@ import Action from "../../components/blog/Action/Action";
 import "./Blog.css";
 import "../style.css";
 
-function Blog() {
+function Blog({ setFilter }) {
   return (
     <div className="Page">
-      <Filter />
+      <Filter setFilter={setFilter} />
       <BlogDetails />
       <Action />
     </div>

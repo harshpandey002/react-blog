@@ -19,20 +19,30 @@ import "./App.css";
 
 function App() {
   const [demo, setDemo] = useState(false);
-  const dispatch = useDispatch();
+  const [filter, setFilter] = useState({
+    filterName: "global",
+    filterCheck: "global",
+  });
 
-  useEffect(() => {
-    dispatch(getStory());
-  }, [dispatch]);
   return (
     <Router>
       <div className="App">
         <Switch>
           <Route
             path="/home"
-            render={() => <Home demo={demo} setDemo={setDemo} />}
+            render={() => (
+              <Home
+                demo={demo}
+                filter={filter}
+                setDemo={setDemo}
+                setFilter={setFilter}
+              />
+            )}
           />
-          <Route path="/blog/:id" component={Blog} />
+          <Route
+            path="/blog/:id"
+            render={() => <Blog setFilter={setFilter} />}
+          />
           <Route path="/edit/:id" component={Edit} />
           <Redirect to="/home" />
         </Switch>

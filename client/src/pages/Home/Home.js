@@ -4,11 +4,11 @@ import Main from "../../components/home/Main/Main";
 import Nav from "../../components/home/Nav/Nav";
 import "../style.css";
 
-function Home({ demo, setDemo }) {
+function Home({ demo, setDemo, filter, setFilter }) {
   return (
     <div className="Page">
-      <Filter />
-      <Main />
+      <Filter setFilter={setFilter} />
+      <Main filter={filter} setFilter={setFilter} />
       <Nav demo={demo} setDemo={setDemo} />
     </div>
   );

@@ -1,19 +1,44 @@
 const post = [
-  { id: 1, title: "lauda", description: "introks", like: false },
-  { id: 2, title: "df", description: "fdgff", like: false },
-  { id: 3, title: "dsfgdfg", description: "isddgo sdfsks", like: false },
-  { id: 4, title: "sdfg", description: "gsdfgofsdks", like: false },
-  { id: 5, title: "sdfg", description: "idfgfooks", like: false },
+  {
+    id: 1,
+    title: "lauda",
+    category: "entertainment",
+    description: "introks",
+    like: false,
+  },
+  { id: 2, title: "df", category: "sports", description: "fdgff", like: false },
+  {
+    id: 3,
+    title: "dsfgdfg",
+    category: "health",
+    description: "isddgo sdfsks",
+    like: false,
+  },
+  {
+    id: 4,
+    title: "sdfg",
+    category: "business",
+    description: "gsdfgofsdks",
+    like: false,
+  },
+  {
+    id: 5,
+    title: "sdfg",
+    category: "programming",
+    description: "idfgfooks",
+    like: false,
+  },
 ];
 
-const result = post.map((p) => {
-  if (p.id == 3) {
-    p.like = true;
-    return p;
-  } else {
-    return p;
-  }
-});
+let store;
 
-console.log(result);
+const func = () => {
+  store = post.filter((p) => {
+    if (p.category === "programming") {
+      return p;
+    }
+  });
+};
+func();
+console.log(store);
 // console.log(post);

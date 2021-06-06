@@ -11,46 +11,61 @@ import {
   faIdCard,
 } from "@fortawesome/free-solid-svg-icons";
 
-function Filter() {
+import { useHistory, useParams } from "react-router-dom";
+
+function Filter({ setFilter }) {
+  const params = useParams();
+  const history = useHistory();
+
+  const filterHandler = (check, name = "category") => {
+    if (useParams) {
+      history.push("/home");
+    }
+    setFilter({
+      filterName: name,
+      filterCheck: check,
+    });
+  };
+
   return (
     <div className="Filter">
-      <div className="btn">
+      <div onClick={() => filterHandler("global", "global")} className="btn">
         <div className="btn--icon">
           <FontAwesomeIcon icon={faGlobeAmericas} />
         </div>
         <div className="btn--name">Global</div>
       </div>
-      <div className="btn">
+      <div onClick={() => filterHandler("business")} className="btn">
         <div className="btn--icon">
           <FontAwesomeIcon icon={faIdCard} />
         </div>
         <div className="btn--name">Business</div>
       </div>
-      <div className="btn">
+      <div onClick={() => filterHandler("entertainment")} className="btn">
         <div className="btn--icon">
           <FontAwesomeIcon icon={faPlay} />
         </div>
         <div className="btn--name">Entertainment</div>
       </div>
-      <div className="btn">
+      <div onClick={() => filterHandler("sports")} className="btn">
         <div className="btn--icon">
           <FontAwesomeIcon icon={faVolleyballBall} />
         </div>
         <div className="btn--name">Sports</div>
       </div>
-      <div className="btn">
+      <div onClick={() => filterHandler("health")} className="btn">
         <div className="btn--icon">
           <FontAwesomeIcon icon={faPlusCircle} />
         </div>
         <div className="btn--name">Health</div>
       </div>
-      <div className="btn">
+      <div onClick={() => filterHandler("programming")} className="btn">
         <div className="btn--icon">
           <FontAwesomeIcon icon={faCode} />
         </div>
         <div className="btn--name">Programming</div>
       </div>
-      <div className="btn">
+      <div onClick={() => filterHandler("", "like")} className="btn">
         <div className="btn--icon">
           <FontAwesomeIcon icon={faHeart} />
         </div>
