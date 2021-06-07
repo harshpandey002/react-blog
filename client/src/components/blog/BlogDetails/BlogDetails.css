@@ -1,7 +1,16 @@
 .BlogDetails {
-  background-color: var(--fg-color);
+  background-color: #ffffff;
   border-radius: var(--bd-radius);
   box-shadow: var(--bx-shadow);
   flex: var(--ct-flex);
   height: max-content;
+  /* padding-top: 0; */
+}
+
+.BlogDetails .ql-toolbar.ql-snow {
+  display: none;
+}
+
+.BlogDetails .ql-editor {
+  padding: 0 2rem;
 }

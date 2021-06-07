@@ -15,6 +15,10 @@
 
 .ql-toolbar.ql-snow {
   border: none;
+  position: sticky;
+  top: 0px;
+  background-color: white;
+  z-index: 2;
 }
 
 .ql-container.ql-snow {
@@ -22,12 +26,14 @@
 }
 
 .ql-editor {
-  font-size: 1rem;
+  font-size: 1.5rem;
+}
+.ql-editor p {
+  margin-top: 1.5rem;
 }
 
 .ql-editor h1 {
   font-weight: 600;
-  margin-bottom: 1rem;
 }
 
 .ql-editor h2 {
