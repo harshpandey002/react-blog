@@ -8,7 +8,7 @@ function Home({ demo, setDemo, filter, setFilter }) {
   return (
     <div className="Page">
       <Filter setFilter={setFilter} />
-      <Main filter={filter} setFilter={setFilter} />
+      <Main filter={filter} />
       <Nav demo={demo} setDemo={setDemo} />
     </div>
   );

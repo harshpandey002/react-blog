@@ -111,6 +111,10 @@ function Form({ blog, setBlog }) {
             onChange={(e) => setBlog({ ...blog, title: e.target.value })}
             id="outlined-basic"
             label="Title"
+            inputProps={{
+              maxlength: 55,
+            }}
+            helperText={`${blog.title.length}/55`}
             variant="outlined"
             required
           />
@@ -123,9 +127,14 @@ function Form({ blog, setBlog }) {
             value={blog.description}
             onChange={(e) => setBlog({ ...blog, description: e.target.value })}
             label="Description"
+            inputProps={{
+              maxlength: 110,
+            }}
+            helperText={`${blog.description.length}/110`}
             multiline
             rows={3}
             variant="outlined"
+            // inputProps={{ maxLength: 12 }}
           />
         </div>
 

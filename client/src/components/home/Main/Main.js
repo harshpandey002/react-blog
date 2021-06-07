@@ -8,7 +8,7 @@ function Main({ filter, setFilter }) {
     <div className="Main">
       <Info />
       <div className="blogs">
-        <Blogs filter={filter} setFilter={setFilter} />
+        <Blogs filter={filter} />
       </div>
     </div>
   );

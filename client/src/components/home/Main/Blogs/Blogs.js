@@ -9,7 +9,7 @@ import moment from "moment";
 
 import "./Blogs.css";
 
-function Blogs({ filter, setFilter }) {
+function Blogs({ filter }) {
   const history = useHistory();
   const story = useSelector((state) => state.story);
   let store = [];
@@ -37,11 +37,15 @@ function Blogs({ filter, setFilter }) {
       <div className="Blogs">
         {store.map((story) => (
           <>
-            <div onClick={() => cardHandler(story.id)} className="card">
-              <h1>{story.title}</h1>
-              <h2>{story.description}</h2>
-              <h3>{story.category}</h3>
-              <h4>{moment(story.created).fromNow()}</h4>
+            <div className="card" onClick={() => cardHandler(story.id)}>
+              <div className="desc">
+                <p>{story.title}</p>
+                <p>{story.description}</p>
+              </div>
+              <div className="footer">
+                <p>{story.category}</p>
+                <p>{moment(story.created).fromNow()}</p>
+              </div>
             </div>
           </>
         ))}
