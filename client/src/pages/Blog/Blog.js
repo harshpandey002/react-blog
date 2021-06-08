@@ -8,7 +8,7 @@ import "../style.css";
 
 function Blog({ setFilter }) {
   return (
-    <div className="Page">
+    <div className="Page BlogRoute">
       <Filter setFilter={setFilter} />
       <BlogDetails />
       <Action />

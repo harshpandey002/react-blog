@@ -27,6 +27,7 @@
   top: var(--sticky);
   display: flex;
   flex-direction: column;
+  user-select: none;
   position: sticky;
   height: max-content;
   gap: 15px;
@@ -45,4 +46,45 @@
   width: 40px;
   height: 40px;
   transition: all 0.3s ease;
+}
+
+@media only screen and (max-width: 780px) {
+  .Page {
+    flex-direction: column;
+    padding-bottom: 20px;
+  }
+
+  .Filter {
+    display: none;
+  }
+
+  .Nav {
+    /* display: none; */
+  }
+
+  .Info {
+    border-radius: 0;
+    height: 120px;
+  }
+
+  .Blogs {
+    padding: 0 20px;
+  }
+
+  .BlogRoute {
+    background-color: white;
+    padding: 0;
+  }
+
+  .EditRoute {
+    padding: 0;
+    gap: 0;
+  }
+
+  .Form {
+    /* display: none; */
+    box-shadow: none;
+    border-radius: 0;
+    padding-bottom: 20px;
+  }
 }

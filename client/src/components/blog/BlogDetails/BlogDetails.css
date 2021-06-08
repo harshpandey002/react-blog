@@ -14,3 +14,11 @@
 .BlogDetails .ql-editor {
   padding: 0 2rem;
 }
+
+@media only screen and (max-width: 780px) {
+  .BlogDetails {
+    border-radius: 0;
+    box-shadow: none;
+    min-height: 100vh;
+  }
+}

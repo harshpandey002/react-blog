@@ -15,7 +15,7 @@ function Edit() {
   });
 
   return (
-    <div className="Page">
+    <div className="Page EditRoute">
       <div className="empty"></div>
       <Editor blog={blog} setBlog={setBlog} />
       <Form blog={blog} setBlog={setBlog} />

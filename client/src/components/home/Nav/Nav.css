@@ -1,6 +1,7 @@
 .Nav .btn {
   border-radius: 13px;
   transition: all 0.3s ease;
+  white-space: nowrap;
 }
 
 .Nav .btn:nth-child(1):hover .btn--icon {

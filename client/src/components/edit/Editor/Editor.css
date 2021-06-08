@@ -40,3 +40,23 @@
   font-weight: 500;
   margin: 0.5rem 0;
 }
+
+@media only screen and (max-width: 1090px) {
+  .empty {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  .Editor {
+    width: 100vw;
+    border-radius: 0;
+    min-height: 100vh;
+    padding: 0;
+    padding-top: 10px;
+  }
+
+  .ql-editor {
+    padding: 0 0;
+  }
+}
