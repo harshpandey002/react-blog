@@ -15,24 +15,6 @@
   padding: var(--padding);
 }
 
-.Filter,
-.Nav,
-.Action,
-.Form {
-  background-color: var(--fg-color);
-  border-radius: var(--bd-radius);
-  box-shadow: var(--bx-shadow);
-  color: var(--ft-color);
-  flex: var(--lt-flex);
-  top: var(--sticky);
-  display: flex;
-  flex-direction: column;
-  user-select: none;
-  position: sticky;
-  height: max-content;
-  gap: 15px;
-}
-
 .btn {
   display: flex;
   align-items: center;
@@ -46,6 +28,26 @@
   width: 40px;
   height: 40px;
   transition: all 0.3s ease;
+}
+
+@media only screen and (min-width: 780px) {
+  .Filter,
+  .Nav,
+  .Action,
+  .Form {
+    background-color: var(--fg-color);
+    border-radius: var(--bd-radius);
+    box-shadow: var(--bx-shadow);
+    color: var(--ft-color);
+    flex: var(--lt-flex);
+    top: var(--sticky);
+    display: flex;
+    flex-direction: column;
+    user-select: none;
+    position: sticky;
+    height: max-content;
+    gap: 15px;
+  }
 }
 
 @media only screen and (max-width: 1090px) {
@@ -63,7 +65,6 @@
 @media only screen and (max-width: 780px) {
   .Page {
     flex-direction: column;
-    padding-bottom: 20px;
   }
 
   .Filter {
@@ -77,11 +78,13 @@
 
   .Blogs {
     padding: 0 20px;
+    margin-bottom: 90px;
   }
 
   .BlogRoute {
     background-color: white;
     padding: 0;
+    margin-bottom: 20px;
   }
 
   .EditRoute {
@@ -100,5 +103,27 @@
 
   .altText {
     padding: 0.3rem 1rem;
+  }
+
+  .Nav,
+  .Action {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    padding: 10px 20px;
+    background-color: #2a2a2a;
+    color: white;
+  }
+
+  .navText,
+  .actionText {
+    display: none;
+  }
+
+  .btn--icon {
+    font-size: 1.2rem;
   }
 }

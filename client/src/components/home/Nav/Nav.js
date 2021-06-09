@@ -39,20 +39,25 @@ function Nav({ demo, setDemo }) {
         <div className="btn--icon">
           <FontAwesomeIcon icon={faPlus} />
         </div>
-        <div className="btn--name">New Story</div>
+        <div className="btn--name">
+          <span className="navText">New Story</span>
+        </div>
       </div>
       <div ref={hide} onClick={demoHandler} className="btn">
         <div className="btn--icon">
           <FontAwesomeIcon icon={faRandom} />
         </div>
-        <div className="btn--name">Demo Stories</div>
+        <div className="btn--name">
+          <span className="navText">Demo Stories</span>
+        </div>
       </div>
       <div className="btn theme">
         <div className="btn--icon">
           <FontAwesomeIcon icon={faAdjust} />
         </div>
         <div className="btn--name">
-          <span className="hideText">Switch </span>Theme
+          <span className="hideText">Switch </span>
+          <span className="navText">Theme</span>
         </div>
       </div>
     </div>

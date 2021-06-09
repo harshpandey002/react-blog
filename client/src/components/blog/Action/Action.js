@@ -37,7 +37,8 @@ function Action() {
           <FontAwesomeIcon icon={faHeart} />
         </div>
         <div className="btn--name">
-          <span className="hideText">Add to </span>Fav
+          <span className="hideText">Add to </span>
+          <span className="actionText">Fav</span>
         </div>
       </div>
       <div onClick={editHandler} className="btn">
@@ -45,7 +46,8 @@ function Action() {
           <FontAwesomeIcon icon={faPen} />
         </div>
         <div className="btn--name">
-          Edit<span className="hideText"> Blog</span>
+          <span className="actionText">Edit</span>
+          <span className="hideText"> Blog</span>
         </div>
       </div>
       <div
@@ -59,14 +61,17 @@ function Action() {
           <FontAwesomeIcon icon={faTrash} />
         </div>
         <div className="btn--name">
-          Delete<span className="hideText"> Blog</span>
+          <span className="actionText">Delete</span>
+          <span className="hideText"> Blog</span>
         </div>
       </div>
       <div onClick={() => history.push("/home")} className="btn">
         <div className="btn--icon">
           <FontAwesomeIcon icon={faHome} />
         </div>
-        <div className="btn--name">Home</div>
+        <div className="btn--name">
+          <span className="actionText">Home</span>
+        </div>
       </div>
     </div>
   );
