@@ -51,13 +51,13 @@ function Blogs({ filter }) {
         ))}
       </div>
       {!store.length && filter.filterCheck && (
-        <p>
+        <p className="altText">
           Either Create <strong>New Story</strong> or Generate{" "}
           <strong>Demo Stories</strong>{" "}
         </p>
       )}
       {!store.length && !filter.filterCheck && (
-        <p>
+        <p className="altText">
           You don't <strong>Like</strong> any story as of now
         </p>
       )}

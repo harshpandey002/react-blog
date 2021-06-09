@@ -3,19 +3,18 @@
   transition: all 0.3s ease;
   white-space: nowrap;
 }
-
+.Nav .btn:hover .btn--icon {
+  margin-right: 5px;
+}
 .Nav .btn:nth-child(1):hover .btn--icon {
   background-color: var(--ic-bg-color);
-  margin-right: 5px;
   transform: rotateZ(90deg);
 }
 .Nav .btn:nth-child(2):hover .btn--icon {
   background-color: var(--ic-bg-color);
-  margin-right: 5px;
   transform: rotateX(180deg);
 }
 .Nav .btn:nth-child(3):hover .btn--icon {
-  margin-right: 5px;
   transform: rotateY(180deg);
 }
 
@@ -34,4 +33,10 @@
 .theme {
   color: white;
   background-color: #2a2a2a;
+}
+
+@media only screen and (max-width: 1090px) {
+  .Nav .btn:hover .btn--icon {
+    margin-right: 0;
+  }
 }

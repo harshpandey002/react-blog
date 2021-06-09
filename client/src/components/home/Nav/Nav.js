@@ -51,7 +51,9 @@ function Nav({ demo, setDemo }) {
         <div className="btn--icon">
           <FontAwesomeIcon icon={faAdjust} />
         </div>
-        <div className="btn--name">Switch Theme</div>
+        <div className="btn--name">
+          <span className="hideText">Switch </span>Theme
+        </div>
       </div>
     </div>
   );

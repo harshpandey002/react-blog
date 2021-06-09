@@ -48,6 +48,18 @@
   transition: all 0.3s ease;
 }
 
+@media only screen and (max-width: 1090px) {
+  .Filter .btn--name {
+    display: none;
+  }
+
+  .Filter,
+  .Action,
+  .Nav {
+    flex: 1;
+  }
+}
+
 @media only screen and (max-width: 780px) {
   .Page {
     flex-direction: column;
@@ -56,10 +68,6 @@
 
   .Filter {
     display: none;
-  }
-
-  .Nav {
-    /* display: none; */
   }
 
   .Info {
@@ -84,7 +92,13 @@
   .Form {
     /* display: none; */
     box-shadow: none;
+    border-top: 1px solid #dfdfdf;
     border-radius: 0;
     padding-bottom: 20px;
+    padding-top: 2rem;
+  }
+
+  .altText {
+    padding: 0.3rem 1rem;
   }
 }
