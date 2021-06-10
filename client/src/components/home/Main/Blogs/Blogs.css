@@ -40,3 +40,14 @@
   margin-bottom: 3px;
   text-transform: capitalize;
 }
+
+.plus:hover,
+.gen:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.plusIcon,
+.genIcon {
+  font-size: 0.9rem;
+}

@@ -7,6 +7,8 @@ import { useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import moment from "moment";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus, faRandom } from "@fortawesome/free-solid-svg-icons";
 import "./Blogs.css";
 
 function Blogs({ filter }) {
@@ -52,8 +54,10 @@ function Blogs({ filter }) {
       </div>
       {!store.length && filter.filterCheck && (
         <p className="altText">
-          Either Create <strong>New Story</strong> or Generate{" "}
-          <strong>Demo Stories</strong>{" "}
+          Either Create <FontAwesomeIcon className="plusIcon" icon={faPlus} />
+          <strong className="plus"> New Story</strong> or Generate{" "}
+          <FontAwesomeIcon className="genIcon" icon={faRandom} />
+          <strong className="gen"> Demo Stories</strong>
         </p>
       )}
       {!store.length && !filter.filterCheck && (
