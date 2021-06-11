@@ -22,10 +22,12 @@
   color: #000000;
   font-weight: 600;
 }
+
 .Nav .btn:nth-child(2):hover {
   color: #000000;
   font-weight: 600;
 }
+
 .Nav .btn:nth-child(3):hover {
   font-weight: 600;
 }

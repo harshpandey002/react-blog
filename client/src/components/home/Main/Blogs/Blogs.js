@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 //Redux
 import { useSelector } from "react-redux";
@@ -18,13 +18,16 @@ function Blogs({ filter }) {
 
   switch (filter.filterName) {
     case "category":
-      store = story.filter((post) => post.category == filter.filterCheck);
+      store = story.filter((post) => post.category === filter.filterCheck);
       break;
     case "like":
-      store = story.filter((post) => post.like == true);
+      store = story.filter((post) => post.like === true);
       break;
     case "global":
       store = story;
+      break;
+    default:
+      return;
       break;
   }
 

@@ -14,7 +14,6 @@ import {
 import { useHistory, useParams } from "react-router-dom";
 
 function Filter({ setFilter }) {
-  const params = useParams();
   const history = useHistory();
 
   const filterHandler = (check, name = "category") => {

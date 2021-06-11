@@ -1,0 +1,75 @@
+:root {
+  --bg-color: #0e0e0e;
+}
+
+.App {
+  --fg-color: #2a2a2a;
+  --ft-color: #d6d6d6;
+}
+
+.BlogDetails {
+  background-color: #2a2a2a;
+}
+
+.ql-editor {
+  color: white;
+}
+
+.Form {
+  border-top: 1px solid #616161;
+  background-color: #2a2a2a;
+}
+
+.desc p:nth-child(1) {
+  color: white;
+}
+
+.desc p:nth-child(2) {
+  color: #c4c4c4;
+}
+
+.footer p:nth-child(1) {
+  background-color: #0e0e0e;
+}
+
+.footer p {
+  color: #c4c4c4;
+}
+
+.btn:hover .btn--icon {
+  color: black;
+}
+
+.Nav .btn:nth-child(3):hover .btn--icon {
+  color: #ffffff;
+}
+
+.btn:hover .btn--name {
+  color: #;
+}
+
+.Filter .btn:hover .btn--icon {
+  color: black;
+}
+
+.Filter .btn:hover {
+  color: #fafafa;
+}
+
+.ql-toolbar.ql-snow {
+  background-color: #2a2a2a;
+}
+
+.ql-toolbar .ql-stroke {
+  fill: none;
+  stroke: #fff;
+}
+
+.ql-toolbar .ql-fill {
+  fill: #fff;
+  stroke: none;
+}
+
+.altText {
+  color: #d6d6d6;
+}
