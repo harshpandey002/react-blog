@@ -16,6 +16,7 @@ import "./App.css";
 import "./Dark.css";
 
 function App() {
+  const [dark, setDark] = useState(false);
   const [demo, setDemo] = useState(false);
   const [filter, setFilter] = useState({
     filterName: "global",
@@ -34,14 +35,16 @@ function App() {
                 filter={filter}
                 setDemo={setDemo}
                 setFilter={setFilter}
+                dark={dark}
+                setDark={setDark}
               />
             )}
           />
           <Route
             path="/blog/:id"
-            render={() => <Blog setFilter={setFilter} />}
+            render={() => <Blog setFilter={setFilter} dark={dark} />}
           />
-          <Route path="/edit/:id" component={Edit} />
+          <Route path="/edit/:id" render={() => <Edit dark={dark} />} />
           <Redirect to="/home" />
         </Switch>
       </div>

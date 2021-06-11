@@ -55,7 +55,7 @@ const useStyles = makeStyles({
   },
 });
 
-function Form({ blog, setBlog }) {
+function Form({ blog, setBlog, dark }) {
   const dispatch = useDispatch();
   let params = useParams();
   let history = useHistory();

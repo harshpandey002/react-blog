@@ -12,7 +12,7 @@ import { useSelector } from "react-redux";
 
 import "./BlogDetails.css";
 
-function BlogDetails() {
+function BlogDetails({ dark }) {
   const params = useParams();
   const story = useSelector((state) =>
     state.story.filter((post) => {

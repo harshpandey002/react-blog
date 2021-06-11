@@ -13,7 +13,7 @@ import {
 
 import { useHistory, useParams } from "react-router-dom";
 
-function Filter({ setFilter }) {
+function Filter({ setFilter, dark }) {
   const history = useHistory();
 
   const filterHandler = (check, name = "category") => {

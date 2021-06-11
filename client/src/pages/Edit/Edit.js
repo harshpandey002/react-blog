@@ -5,7 +5,7 @@ import Form from "../../components/edit/Form/Form";
 import "./Edit.css";
 import "../style.css";
 
-function Edit() {
+function Edit({ dark }) {
   const [blog, setBlog] = useState({
     id: "",
     title: "",
@@ -17,8 +17,8 @@ function Edit() {
   return (
     <div className="Page EditRoute">
       <div className="empty"></div>
-      <Editor blog={blog} setBlog={setBlog} />
-      <Form blog={blog} setBlog={setBlog} />
+      <Editor dark={dark} blog={blog} setBlog={setBlog} />
+      <Form dark={dark} blog={blog} setBlog={setBlog} />
     </div>
   );
 }

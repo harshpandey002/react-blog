@@ -14,7 +14,7 @@ import { deleteStory, likeStory } from "../../../actions/story";
 
 import "./Action.css";
 
-function Action() {
+function Action({ dark }) {
   let params = useParams();
   let history = useHistory();
   const dispatch = useDispatch();

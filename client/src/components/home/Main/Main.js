@@ -3,12 +3,12 @@ import "./Main.css";
 import Info from "./Info/Info";
 import Blogs from "./Blogs/Blogs";
 
-function Main({ filter, setFilter }) {
+function Main({ filter, dark }) {
   return (
     <div className="Main">
       <Info />
       <div className="blogs">
-        <Blogs filter={filter} />
+        <Blogs dark={dark} filter={filter} />
       </div>
     </div>
   );

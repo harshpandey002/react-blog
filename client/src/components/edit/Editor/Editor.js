@@ -6,7 +6,7 @@ import "react-quill/dist/quill.snow.css";
 
 import "./Editor.css";
 
-function Editor({ blog, setBlog }) {
+function Editor({ blog, setBlog, dark }) {
   const modules = {
     toolbar: [
       [{ header: 1 }, { header: 2 }],

@@ -6,12 +6,12 @@ import Action from "../../components/blog/Action/Action";
 import "./Blog.css";
 import "../style.css";
 
-function Blog({ setFilter }) {
+function Blog({ setFilter, dark }) {
   return (
     <div className="Page BlogRoute">
-      <Filter setFilter={setFilter} />
-      <BlogDetails />
-      <Action />
+      <Filter dark={dark} setFilter={setFilter} />
+      <BlogDetails dark={dark} />
+      <Action dark={dark} />
     </div>
   );
 }
