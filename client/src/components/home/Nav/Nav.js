@@ -10,7 +10,7 @@ import { createStory } from "../../../actions/story";
 import { demoData } from "../demoData";
 import "./Nav.css";
 
-function Nav({ demo, setDemo }) {
+function Nav({ demo, setDemo, dark }) {
   const hide = useRef(null);
   let history = useHistory();
   const dispatch = useDispatch();
@@ -34,7 +34,7 @@ function Nav({ demo, setDemo }) {
   };
 
   return (
-    <div className="Nav">
+    <div className={`Nav ${dark ? `Nav-dark` : ""}`}>
       <div onClick={handleClick} className="btn">
         <div className="btn--icon">
           <FontAwesomeIcon icon={faPlus} />

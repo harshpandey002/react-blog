@@ -1,75 +1,69 @@
-body {
+.App-dark {
+  --fg-color: #2a2a2a;
+  --ft-color: #d6d6d6;
   background-color: #0e0e0e;
 }
 
-.App {
-  --fg-color: #2a2a2a;
-  --ft-color: #d6d6d6;
-}
-
-.BlogDetails {
+.BlogDetails-dark {
   background-color: #2a2a2a;
 }
 
-.ql-editor {
+.Editor-dark .ql-editor,
+.BlogDetails-dark .ql-editor {
   color: white;
 }
 
-.Form {
-  /* border-top: 1px solid #616161; */
+.Form-dark {
   background-color: #ffffff;
 }
 
-.desc p:nth-child(1) {
+.desc-dark p:nth-child(1) {
   color: white;
 }
 
-.desc p:nth-child(2) {
+.desc-dark p:nth-child(2) {
   color: #c4c4c4;
 }
 
-.footer p:nth-child(1) {
+.footer-dark p:nth-child(1) {
   background-color: #0e0e0e;
 }
 
-.footer p {
+.footer-dark p {
   color: #c4c4c4;
 }
 
-.btn:hover .btn--icon {
-  color: black;
-}
-
-.Nav .btn:nth-child(3):hover .btn--icon {
+.Nav-dark .btn:nth-child(3):hover .btn--icon {
   color: #ffffff;
 }
 
-.btn:hover .btn--name {
+.Nav-dark .btn:hover .btn--name,
+.Action-dark .btn:hover .btn--name {
   color: #fff;
 }
 
-.Filter .btn:hover .btn--icon {
+.Filter-dark .btn:hover .btn--icon {
   color: black;
 }
 
-.Filter .btn:hover {
+.Filter-dark .btn:hover {
   color: #fafafa;
 }
 
-.ql-toolbar.ql-snow {
+.Editor-dark .ql-toolbar.ql-snow {
   background-color: #2a2a2a;
 }
 
-.ql-toolbar .ql-stroke {
+.Editor-dark .ql-toolbar .ql-stroke {
   fill: none;
   stroke: #fff;
 }
 
-.ql-toolbar .ql-fill {
+.Editor-dark .ql-toolbar .ql-fill {
   fill: #fff;
   stroke: none;
 }
 
-.altText {
+.altText-dark {
   color: #d6d6d6;
 }

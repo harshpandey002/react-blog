@@ -27,7 +27,7 @@ function Filter({ setFilter, dark }) {
   };
 
   return (
-    <div className="Filter">
+    <div className={`Filter ${dark ? `Filter-dark` : ""}`}>
       <div onClick={() => filterHandler("global", "global")} className="btn">
         <div className="btn--icon">
           <FontAwesomeIcon icon={faGlobeAmericas} />

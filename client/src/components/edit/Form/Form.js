@@ -122,7 +122,7 @@ function Form({ blog, setBlog, dark }) {
   // };
 
   return (
-    <div className="Form">
+    <div className={`Form ${dark ? `Form-dark` : ""}`}>
       <form autoComplete="off" onSubmit={handleSubmit}>
         <div className="inpt">
           <TextField

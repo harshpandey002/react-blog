@@ -31,7 +31,7 @@ function Action({ dark }) {
   };
 
   return (
-    <div className="Action">
+    <div className={`Action ${dark ? `Action-dark` : ""}`}>
       <div onClick={favHandler} className="btn">
         <div className="btn--icon">
           <FontAwesomeIcon icon={faHeart} />

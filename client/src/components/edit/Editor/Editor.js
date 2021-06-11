@@ -22,7 +22,7 @@ function Editor({ blog, setBlog, dark }) {
   };
 
   return (
-    <div className="Editor">
+    <div className={`Editor ${dark ? `Editor-dark` : ""}`}>
       <ReactQuill
         theme="snow"
         placeholder="Start typing here..."

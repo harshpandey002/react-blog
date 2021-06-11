@@ -23,7 +23,7 @@ function BlogDetails({ dark }) {
   )[0];
 
   return (
-    <div className="BlogDetails">
+    <div className={`BlogDetails ${dark ? `BlogDetails-dark` : ""}`}>
       <ReactQuill
         // theme="snow"
         readOnly

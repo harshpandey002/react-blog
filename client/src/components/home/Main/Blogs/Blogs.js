@@ -11,7 +11,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faRandom } from "@fortawesome/free-solid-svg-icons";
 import "./Blogs.css";
 
-function Blogs({ filter }) {
+function Blogs({ filter, dark }) {
   const history = useHistory();
   const story = useSelector((state) => state.story);
   let store = [];
@@ -43,11 +43,11 @@ function Blogs({ filter }) {
         {store.map((story) => (
           <>
             <div className="card" onClick={() => cardHandler(story.id)}>
-              <div className="desc">
+              <div className={`desc ${dark ? `desc-dark` : ""}`}>
                 <p>{story.title}</p>
                 <p>{story.description}</p>
               </div>
-              <div className="footer">
+              <div className={`footer ${dark ? `footer-dark` : ""}`}>
                 <p>{story.category}</p>
                 <p>{moment(story.created).fromNow()}</p>
               </div>
@@ -56,7 +56,7 @@ function Blogs({ filter }) {
         ))}
       </div>
       {!store.length && filter.filterCheck && (
-        <p className="altText">
+        <p className={`altText ${dark ? `altText-dark` : ""}`}>
           Either Create <FontAwesomeIcon className="plusIcon" icon={faPlus} />
           <strong className="plus"> New Story</strong> or Generate{" "}
           <FontAwesomeIcon className="genIcon" icon={faRandom} />
@@ -64,7 +64,7 @@ function Blogs({ filter }) {
         </p>
       )}
       {!store.length && !filter.filterCheck && (
-        <p className="altText">
+        <p className={`altText ${dark ? `altText-dark` : ""}`}>
           You don't <strong>Like</strong> any story as of now
         </p>
       )}

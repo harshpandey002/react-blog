@@ -21,12 +21,14 @@
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
 
-html {
+html,
+body,
+#root,
+.App {
   height: 100%;
 }
 
 body {
-  min-height: 100%;
   background-color: var(--bg-color);
   font-family: "Montserrat", sans-serif;
   font-size: 1.1rem;
