@@ -1,5 +1,5 @@
-:root {
-  --bg-color: #0e0e0e;
+body {
+  background-color: #0e0e0e;
 }
 
 .App {
@@ -16,8 +16,8 @@
 }
 
 .Form {
-  border-top: 1px solid #616161;
-  background-color: #2a2a2a;
+  /* border-top: 1px solid #616161; */
+  background-color: #ffffff;
 }
 
 .desc p:nth-child(1) {

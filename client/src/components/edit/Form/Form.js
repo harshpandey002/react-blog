@@ -15,6 +15,12 @@ import "./Form.css";
 import { useDispatch, useSelector } from "react-redux";
 
 const useStyles = makeStyles({
+  root: {
+    "& label.Mui-focused": {
+      color: "green",
+    },
+  },
+
   width: {
     width: "100%",
   },
@@ -24,6 +30,11 @@ const useStyles = makeStyles({
     textAlign: "left",
   },
 
+  input: {
+    color: "white",
+    outlineColor: "white",
+  },
+
   cta: {
     background: "white",
     flex: 1,
@@ -31,6 +42,15 @@ const useStyles = makeStyles({
       background: "#f0f0f0",
       boxShadow:
         "0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);",
+    },
+  },
+
+  cta: {
+    background: "#161616",
+    color: "#c9c9c9",
+    flex: 1,
+    "&:hover": {
+      background: "#0e0e0e",
     },
   },
 });
@@ -113,6 +133,7 @@ function Form({ blog, setBlog }) {
             label="Title"
             inputProps={{
               maxlength: 55,
+              // className: classes.input,
             }}
             helperText={`${blog.title.length}/55`}
             variant="outlined"
@@ -129,12 +150,12 @@ function Form({ blog, setBlog }) {
             label="Description"
             inputProps={{
               maxlength: 110,
+              // className: classes.input,
             }}
             helperText={`${blog.description.length}/110`}
             multiline
             rows={3}
             variant="outlined"
-            // inputProps={{ maxLength: 12 }}
           />
         </div>
 
@@ -151,6 +172,11 @@ function Form({ blog, setBlog }) {
               value={blog.category}
               onChange={(e) => setBlog({ ...blog, category: e.target.value })}
               label="Category"
+              inputProps={
+                {
+                  // className: classes.input,
+                }
+              }
             >
               <MenuItem value="">
                 <em>None</em>
