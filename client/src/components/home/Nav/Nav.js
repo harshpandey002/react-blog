@@ -10,7 +10,7 @@ import { createStory } from "../../../actions/story";
 import { demoData } from "../demoData";
 import "./Nav.css";
 
-function Nav({ demo, setDemo, dark }) {
+function Nav({ demo, setDemo, dark, setDark }) {
   const hide = useRef(null);
   let history = useHistory();
   const dispatch = useDispatch();
@@ -51,7 +51,7 @@ function Nav({ demo, setDemo, dark }) {
           <span className="navText">Demo Stories</span>
         </div>
       </div>
-      <div className="btn theme">
+      <div onClick={() => setDark(!dark)} className="btn theme">
         <div className="btn--icon">
           <FontAwesomeIcon icon={faAdjust} />
         </div>

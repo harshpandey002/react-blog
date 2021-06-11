@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Home from "./pages/Home/Home";
 import Edit from "./pages/Edit/Edit";
 import Blog from "./pages/Blog/Blog";
@@ -22,6 +22,16 @@ function App() {
     filterName: "global",
     filterCheck: "global",
   });
+
+  const body = document.querySelector("body");
+
+  useEffect(() => {
+    if (dark) {
+      body.style.backgroundColor = "#0e0e0e";
+    } else {
+      body.style.backgroundColor = "#f3f3f3";
+    }
+  }, [dark]);
 
   return (
     <Router>
