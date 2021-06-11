@@ -16,7 +16,7 @@ import "./App.css";
 import "./Dark.css";
 
 function App() {
-  const [dark, setDark] = useState(true);
+  const [dark, setDark] = useState(false);
   const [demo, setDemo] = useState(false);
   const [filter, setFilter] = useState({
     filterName: "global",

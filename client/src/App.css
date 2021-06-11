@@ -12,6 +12,7 @@
   --ct-flex: 33;
   --padding: 20px;
   --sticky: 50px;
+  --anim: all 0.5s ease;
 }
 
 * {
@@ -30,6 +31,7 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 1.1rem;
   height: 100%;
+  transition: var(--anim);
 }
 
 ::-webkit-scrollbar {
@@ -51,10 +53,13 @@ body {
   padding: 50px;
   max-width: 1600px;
   margin: auto;
+  min-height: 100vh;
+  transition: var(--anim);
 }
 
 @media only screen and (max-width: 780px) {
   .App {
     padding: 0;
+    min-height: 90vh;
   }
 }

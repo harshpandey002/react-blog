@@ -14,6 +14,7 @@
 .Info,
 .BlogDetails {
   padding: var(--padding);
+  transition: var(--anim);
 }
 
 .btn {
@@ -21,6 +22,7 @@
   align-items: center;
   cursor: pointer;
   gap: 5px;
+  transition: var(--anim);
 }
 
 .btn--icon {

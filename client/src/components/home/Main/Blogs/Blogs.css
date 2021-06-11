@@ -19,6 +19,7 @@
   flex-direction: column;
   justify-content: space-between;
   /* gap: 10px; */
+  transition: var(--anim);
 }
 
 .desc p:nth-child(1) {
