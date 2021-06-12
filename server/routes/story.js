@@ -5,6 +5,6 @@ import { getStory, createStory } from "../controllers/story.js";
 const router = express.Router();
 
 router.get("/", getStory);
-router.get("/", createStory);
+router.post("/", createStory);
 
 export default router;

@@ -33,8 +33,6 @@ function Blogs({ filter, dark }) {
       return;
   }
 
-  console.log(filter.filterCheck);
-
   const cardHandler = (id) => {
     history.push(`/blog/${id}`);
   };
