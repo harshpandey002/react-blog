@@ -28,7 +28,6 @@ function Blogs({ filter, dark }) {
       break;
     default:
       return;
-      break;
   }
 
   console.log(filter.filterCheck);
