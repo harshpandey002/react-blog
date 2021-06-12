@@ -27,7 +27,7 @@ function Action({ dark }) {
   };
 
   const favHandler = () => {
-    dispatch(likeStory(story.id));
+    dispatch(likeStory(story._id));
   };
 
   return (

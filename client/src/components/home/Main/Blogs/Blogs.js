@@ -42,7 +42,7 @@ function Blogs({ filter, dark }) {
       <div className="Blogs">
         {store.map((story) => (
           <>
-            <div className="card" onClick={() => cardHandler(story.id)}>
+            <div className="card" onClick={() => cardHandler(story._id)}>
               <div className={`desc ${dark ? `desc-dark` : ""}`}>
                 <p>{story.title}</p>
                 <p>{story.description}</p>

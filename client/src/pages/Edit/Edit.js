@@ -7,7 +7,7 @@ import "../style.css";
 
 function Edit({ dark }) {
   const [blog, setBlog] = useState({
-    id: "",
+    _id: "",
     title: "",
     description: "",
     category: "",

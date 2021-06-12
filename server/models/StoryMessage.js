@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 
 const storySchema = mongoose.Schema({
+  _id: String,
   title: String,
   description: String,
   category: String,

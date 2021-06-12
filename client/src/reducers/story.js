@@ -14,11 +14,11 @@ const story = (story = [], action) => {
       return [...story, action.payload];
     case UPDATE:
       return story.map((post) =>
-        post.id === action.payload.id ? action.payload : post
+        post._id === action.payload._id ? action.payload : post
       );
     case LIKE:
       return story.map((post) => {
-        if (post.id === action.payload) {
+        if (post._id === action.payload) {
           post.like = !post.like;
           return post;
         } else {
@@ -26,7 +26,7 @@ const story = (story = [], action) => {
         }
       });
     case DELETE:
-      return story.filter((post) => post.id !== action.payload);
+      return story.filter((post) => post._id !== action.payload);
     default:
       return [...story];
   }

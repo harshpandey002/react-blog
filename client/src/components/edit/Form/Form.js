@@ -62,7 +62,7 @@ function Form({ blog, setBlog, dark }) {
 
   let post = useSelector((state) =>
     state.story.filter((post) => {
-      if (post.id === params.id) {
+      if (post._id === params.id) {
         return post;
       }
     })
@@ -72,7 +72,7 @@ function Form({ blog, setBlog, dark }) {
     console.log("useEffect Post: ", post);
     setBlog({
       ...blog,
-      id: params.id,
+      _id: params.id,
       created: Date(),
       like: false,
     });
@@ -82,7 +82,7 @@ function Form({ blog, setBlog, dark }) {
         ...post,
       }));
     }
-  }, [blog.id]);
+  }, [blog._id]);
 
   const handleSubmit = (e) => {
     e.preventDefault();

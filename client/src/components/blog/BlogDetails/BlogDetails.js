@@ -16,7 +16,7 @@ function BlogDetails({ dark }) {
   const params = useParams();
   const story = useSelector((state) =>
     state.story.filter((post) => {
-      if (post.id === params.id) {
+      if (post._id === params.id) {
         return post;
       }
     })
