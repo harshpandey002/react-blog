@@ -3,6 +3,9 @@ import Home from "./pages/Home/Home";
 import Edit from "./pages/Edit/Edit";
 import Blog from "./pages/Blog/Blog";
 
+import { useDispatch } from "react-redux";
+import { getStory } from "./actions/story";
+
 //Router
 import {
   BrowserRouter as Router,
@@ -16,6 +19,7 @@ import "./App.css";
 import "./Dark.css";
 
 function App() {
+  const dispatch = useDispatch();
   const [dark, setDark] = useState(false);
   const [demo, setDemo] = useState(false);
   const [filter, setFilter] = useState({
@@ -31,7 +35,9 @@ function App() {
     } else {
       body.style.backgroundColor = "#f3f3f3";
     }
-  }, [dark]);
+
+    dispatch(getStory());
+  }, [dark, dispatch]);
 
   return (
     <Router>
