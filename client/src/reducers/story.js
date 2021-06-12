@@ -9,7 +9,7 @@ import {
 const story = (story = [], action) => {
   switch (action.type) {
     case FETCH_ALL:
-      return [...story];
+      return action.payload;
     case CREATE:
       return [...story, action.payload];
     case UPDATE:

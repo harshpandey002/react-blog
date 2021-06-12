@@ -14,6 +14,9 @@ import "./Blogs.css";
 function Blogs({ filter, dark }) {
   const history = useHistory();
   const story = useSelector((state) => state.story);
+
+  console.log("backend", story);
+
   let store = [];
 
   switch (filter.filterName) {

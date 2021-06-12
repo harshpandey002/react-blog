@@ -6,10 +6,17 @@ import {
   LIKE,
 } from "../constants/actionTypes";
 
+import * as api from "../api/index";
+
 //Action Creator
 
 export const getStory = () => async (dispatch) => {
-  dispatch({ type: FETCH_ALL });
+  const { data } = await api.fetchStory();
+  try {
+    dispatch({ type: FETCH_ALL, payload: data });
+  } catch (error) {
+    console.log(error.message);
+  }
 };
 
 export const createStory = (story) => async (dispatch) => {
