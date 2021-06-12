@@ -30,7 +30,13 @@ export const createStory = (story) => async (dispatch) => {
 };
 
 export const updateStory = (story) => async (dispatch) => {
-  dispatch({ type: UPDATE, payload: story });
+  try {
+    const { data } = await api.updateStory(story);
+
+    dispatch({ type: UPDATE, payload: data });
+  } catch (error) {
+    console.log(error.message);
+  }
 };
 
 export const deleteStory = (id) => async (dispatch) => {

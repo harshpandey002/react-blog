@@ -1,3 +1,4 @@
+import mongoose from "mongoose";
 import StoryMessage from "../models/StoryMessage.js";
 
 export const getStory = async (req, res) => {
@@ -21,4 +22,15 @@ export const createStory = async (req, res) => {
   } catch (error) {
     res.status(409).json({ message: error.message });
   }
+};
+
+export const updateStory = async (req, res) => {
+  const story = req.body;
+  const _id = story._id;
+
+  const updatedStory = await StoryMessage.findByIdAndUpdate(_id, story, {
+    new: true,
+  });
+
+  res.json(updatedStory);
 };
