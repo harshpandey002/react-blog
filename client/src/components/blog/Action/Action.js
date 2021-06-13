@@ -19,7 +19,7 @@ function Action({ dark }) {
   let history = useHistory();
   const dispatch = useDispatch();
   const story = useSelector((state) =>
-    state.story.filter((post) => post.id === params.id)
+    state.story.filter((post) => post._id === params.id)
   )[0];
 
   const editHandler = () => {
@@ -52,7 +52,7 @@ function Action({ dark }) {
       </div>
       <div
         onClick={() => {
-          dispatch(deleteStory(story.id));
+          dispatch(deleteStory(story._id));
           history.goBack();
         }}
         className="btn"

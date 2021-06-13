@@ -1,4 +1,3 @@
-import mongoose from "mongoose";
 import StoryMessage from "../models/StoryMessage.js";
 
 export const getStory = async (req, res) => {
@@ -33,4 +32,12 @@ export const updateStory = async (req, res) => {
   });
 
   res.json(updatedStory);
+};
+
+export const deleteStory = async (req, res) => {
+  const { id: _id } = req.params;
+
+  await StoryMessage.findByIdAndRemove(_id);
+
+  res.json({ message: "post deleted successfully" });
 };

@@ -40,6 +40,8 @@ export const updateStory = (story) => async (dispatch) => {
 };
 
 export const deleteStory = (id) => async (dispatch) => {
+  await api.deleteStory(id);
+
   dispatch({ type: DELETE, payload: id });
 };
 
