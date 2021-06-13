@@ -13,6 +13,10 @@ app.use(cors());
 
 app.use("/story", storyRoutes);
 
+app.get("/", (req, res) => {
+  res.send("Hello to Strory API");
+});
+
 const PORT = process.env.PORT || 5000;
 
 mongoose
