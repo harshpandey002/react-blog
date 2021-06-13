@@ -44,7 +44,3 @@ export const deleteStory = (id) => async (dispatch) => {
 
   dispatch({ type: DELETE, payload: id });
 };
-
-export const likeStory = (id) => async (dispatch) => {
-  dispatch({ type: LIKE, payload: id });
-};

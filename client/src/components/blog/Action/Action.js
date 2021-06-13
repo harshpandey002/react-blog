@@ -48,7 +48,7 @@ function Action({ dark }) {
         </div>
         <div className="btn--name">
           <span className="actionText">Edit</span>
-          <span className="hideText"> Blog</span>
+          <span className="hideText"> Story</span>
         </div>
       </div>
       <div
@@ -63,7 +63,7 @@ function Action({ dark }) {
         </div>
         <div className="btn--name">
           <span className="actionText">Delete</span>
-          <span className="hideText"> Blog</span>
+          <span className="hideText"> Story</span>
         </div>
       </div>
       <div onClick={() => history.push("/home")} className="btn">
