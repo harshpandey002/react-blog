@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const url = "http://localhost:5000/story";
+const url = "https://react-medium.herokuapp.com/story";
 
 export const fetchStory = () => axios.get(url);
 export const createStory = (newStory) => axios.post(url, newStory);
