@@ -6,6 +6,7 @@ const storySchema = mongoose.Schema({
   description: String,
   category: String,
   blogData: String,
+  like: Boolean,
 });
 
 const StoryMessage = mongoose.model("StoryMessage", storySchema);

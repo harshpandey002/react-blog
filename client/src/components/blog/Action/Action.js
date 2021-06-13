@@ -10,7 +10,7 @@ import {
 
 //Redux
 import { useDispatch, useSelector } from "react-redux";
-import { deleteStory, likeStory } from "../../../actions/story";
+import { deleteStory, updateStory } from "../../../actions/story";
 
 import "./Action.css";
 
@@ -27,7 +27,8 @@ function Action({ dark }) {
   };
 
   const favHandler = () => {
-    dispatch(likeStory(story._id));
+    const favStory = { ...story, like: !story.like };
+    dispatch(updateStory(favStory));
   };
 
   return (
