@@ -41,7 +41,7 @@ export const demoData = [
     _id: "5",
     title: "Journey of Improving React App Performance by 10x",
     description:
-      "Ever got this “Aw! Snap” on your application? Tried to solve it? D_id you just google it and find no...",
+      "Ever got this “Aw! Snap” on your application? Tried to solve it? Did you just google it and find no...",
     category: "programming",
     blogData: "<h1>Demo Story 5</h1>",
     created: Date(),

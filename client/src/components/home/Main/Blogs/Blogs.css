@@ -11,6 +11,7 @@
   background-color: var(--fg-color);
   border-radius: var(--bd-radius);
   box-shadow: var(--bx-shadow);
+  position: relative;
   text-align: left;
   padding: 20px;
   padding-bottom: 15px;
@@ -18,8 +19,16 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* gap: 10px; */
-  transition: var(--anim);
+  transition: all 0.2s;
+}
+.card:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.card-dark:hover {
+  background-color: rgb(20, 20, 20);
+  box-shadow: none;
 }
 
 .desc p:nth-child(1) {

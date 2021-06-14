@@ -53,10 +53,9 @@ function Blogs({ filter, dark }) {
             <>
               <motion.div
                 key="key"
-                className="card"
+                className={`card ${dark ? `card-dark` : ""}`}
                 onClick={() => cardHandler(story._id)}
                 variants={blogCard}
-                layout
               >
                 <div className={`desc ${dark ? `desc-dark` : ""}`}>
                   <p>{story.title}</p>

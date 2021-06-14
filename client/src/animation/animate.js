@@ -38,4 +38,7 @@ export const blogCard = {
       duration: 0.2,
     },
   },
+  hover: {
+    y: -5,
+  },
 };
