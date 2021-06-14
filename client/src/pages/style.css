@@ -21,6 +21,7 @@
   align-items: center;
   cursor: pointer;
   gap: 5px;
+  transition: var(--anim);
 }
 
 .btn--icon {

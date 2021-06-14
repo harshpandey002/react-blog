@@ -7,9 +7,12 @@ import { useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import moment from "moment";
 
+import { motion, AnimateSharedLayout } from "framer-motion";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faRandom } from "@fortawesome/free-solid-svg-icons";
 import "./Blogs.css";
+import { blogCard, container, parent } from "../../../../animation/animate";
 
 function Blogs({ filter, dark }) {
   const history = useHistory();
@@ -39,22 +42,35 @@ function Blogs({ filter, dark }) {
 
   return (
     <>
-      <div className="Blogs">
-        {store.map((story) => (
-          <>
-            <div className="card" onClick={() => cardHandler(story._id)}>
-              <div className={`desc ${dark ? `desc-dark` : ""}`}>
-                <p>{story.title}</p>
-                <p>{story.description}</p>
-              </div>
-              <div className={`footer ${dark ? `footer-dark` : ""}`}>
-                <p>{story.category}</p>
-                <p>{moment(story.created).fromNow()}</p>
-              </div>
-            </div>
-          </>
-        ))}
-      </div>
+      <AnimateSharedLayout type="crossfade">
+        <motion.div
+          className="Blogs"
+          variants={parent}
+          initial="hidden"
+          animate="show"
+        >
+          {store.map((story) => (
+            <>
+              <motion.div
+                key="key"
+                className="card"
+                onClick={() => cardHandler(story._id)}
+                variants={blogCard}
+                layout
+              >
+                <div className={`desc ${dark ? `desc-dark` : ""}`}>
+                  <p>{story.title}</p>
+                  <p>{story.description}</p>
+                </div>
+                <div className={`footer ${dark ? `footer-dark` : ""}`}>
+                  <p>{story.category}</p>
+                  <p>{moment(story.created).fromNow()}</p>
+                </div>
+              </motion.div>
+            </>
+          ))}
+        </motion.div>
+      </AnimateSharedLayout>
       {!store.length && filter.filterCheck && (
         <p className={`altText ${dark ? `altText-dark` : ""}`}>
           Either Create <FontAwesomeIcon className="plusIcon" icon={faPlus} />

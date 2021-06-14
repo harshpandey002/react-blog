@@ -54,6 +54,7 @@ body {
   max-width: 1600px;
   margin: auto;
   min-height: 100vh;
+  transition: var(--anim);
 }
 
 @media only screen and (max-width: 780px) {
