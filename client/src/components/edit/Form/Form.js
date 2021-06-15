@@ -181,7 +181,7 @@ function Form({ blog, setBlog, dark }) {
               <MenuItem value="">
                 <em>None</em>
               </MenuItem>
-              <MenuItem value="businesss">Businesss</MenuItem>
+              <MenuItem value="business">Business</MenuItem>
               <MenuItem value="entertainment">Entertainment</MenuItem>
               <MenuItem value="sports">Sports</MenuItem>
               <MenuItem value="health">Health</MenuItem>

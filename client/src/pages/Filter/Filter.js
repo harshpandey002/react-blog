@@ -26,26 +26,9 @@ function Filter({ setFilter, dark }) {
     });
   };
 
-  const btns = document.querySelectorAll(".Filter .btn");
-
-  btns.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      btns.forEach((item) => {
-        if (item !== btn) {
-          item.classList.remove("selected");
-        }
-      });
-      btn.classList.add("selected");
-      console.log(btn);
-    });
-  });
-
   return (
     <div className={`Filter ${dark ? `Filter-dark` : ""}`}>
-      <div
-        onClick={() => filterHandler("global", "global")}
-        className="btn selected"
-      >
+      <div onClick={() => filterHandler("global", "global")} className="btn">
         <div className="btn--icon">
           <FontAwesomeIcon icon={faGlobeAmericas} />
         </div>
