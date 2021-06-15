@@ -8,7 +8,7 @@ import "./Edit.css";
 import "../style.css";
 import { container } from "../../animation/animate";
 
-function Edit({ dark }) {
+function Edit({ notify, dark }) {
   const [blog, setBlog] = useState({
     _id: "",
     title: "",
@@ -26,7 +26,7 @@ function Edit({ dark }) {
     >
       <div className="empty"></div>
       <Editor dark={dark} blog={blog} setBlog={setBlog} />
-      <Form dark={dark} blog={blog} setBlog={setBlog} />
+      <Form notify={notify} dark={dark} blog={blog} setBlog={setBlog} />
     </motion.div>
   );
 }

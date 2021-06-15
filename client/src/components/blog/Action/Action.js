@@ -14,7 +14,7 @@ import { deleteStory, updateStory } from "../../../actions/story";
 
 import "./Action.css";
 
-function Action({ dark }) {
+function Action({ notify, dark }) {
   let params = useParams();
   let history = useHistory();
   const dispatch = useDispatch();
@@ -33,13 +33,13 @@ function Action({ dark }) {
 
   return (
     <div className={`Action ${dark ? `Action-dark` : ""}`}>
-      <div onClick={favHandler} className={`btn ${story.like ? `like` : ""}`}>
+      <div onClick={favHandler} className={`btn ${story?.like ? `like` : ""}`}>
         <div className="btn--icon">
           <FontAwesomeIcon icon={faHeart} />
         </div>
         <div className="btn--name">
           <span className="hideText">{`${
-            story.like ? `Remove ` : `Add to `
+            story?.like ? `Remove ` : `Add to `
           }`}</span>
           <span className="actionText">Fav</span>
         </div>
@@ -56,6 +56,7 @@ function Action({ dark }) {
       <div
         onClick={() => {
           dispatch(deleteStory(story._id));
+          notify("Story Deleted");
           history.goBack();
         }}
         className="btn"

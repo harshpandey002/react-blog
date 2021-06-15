@@ -6,11 +6,9 @@ import FormControl from "@material-ui/core/FormControl";
 import InputLabel from "@material-ui/core/InputLabel";
 import Select from "@material-ui/core/Select";
 import Button from "@material-ui/core/Button";
-// import { ToastContainer, toast } from "react-toastify";
 import { createStory, updateStory } from "../../../actions/story";
 import { useParams, useHistory } from "react-router-dom";
 
-import "react-toastify/dist/ReactToastify.css";
 import "./Form.css";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -55,7 +53,7 @@ const useStyles = makeStyles({
   },
 });
 
-function Form({ blog, setBlog, dark }) {
+function Form({ notify, blog, setBlog, dark }) {
   const dispatch = useDispatch();
   let params = useParams();
   let history = useHistory();
@@ -89,9 +87,11 @@ function Form({ blog, setBlog, dark }) {
     if (post) {
       console.log("UPDATE: ", blog);
       dispatch(updateStory(blog));
+      notify("Story Updated");
     } else {
       console.log("CREATE: ", blog);
       dispatch(createStory(blog));
+      notify("Story Created");
     }
     clear("Saved");
     history.goBack();
@@ -108,18 +108,6 @@ function Form({ blog, setBlog, dark }) {
   };
 
   const classes = useStyles();
-
-  // const notify = (messege) => {
-  //   toast.dark(messege, {
-  //     position: "bottom-right",
-  //     autoClose: 3000,
-  //     hideProgressBar: true,
-  //     closeOnClick: true,
-  //     pauseOnHover: true,
-  //     draggable: true,
-  //     progress: undefined,
-  //   });
-  // };
 
   return (
     <div className={`Form ${dark ? `Form-dark` : ""}`}>
@@ -210,17 +198,6 @@ function Form({ blog, setBlog, dark }) {
           </Button>
         </div>
       </form>
-      {/* <ToastContainer
-        position="bottom-right"
-        autoClose={3000}
-        hideProgressBar
-        newestOnTop
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-      /> */}
     </div>
   );
 }

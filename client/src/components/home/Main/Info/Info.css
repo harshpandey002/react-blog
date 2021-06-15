@@ -12,6 +12,7 @@
 .brands {
   cursor: pointer;
   transition: color 0.3s ease;
+  color: #0e0e0e;
 }
 
 .brands:nth-child(1):hover {

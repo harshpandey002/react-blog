@@ -14,6 +14,9 @@ import {
   Redirect,
 } from "react-router-dom";
 
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import "./App.css";
 
 import "./Dark.css";
@@ -39,6 +42,18 @@ function App() {
     dispatch(getStory());
   }, [dark, dispatch]);
 
+  const notify = (messege) => {
+    toast.dark(messege, {
+      position: "bottom-right",
+      autoClose: 3000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+  };
+
   return (
     <Router>
       <div className={`App ${dark ? `App-dark` : ""}`}>
@@ -58,11 +73,27 @@ function App() {
           />
           <Route
             path="/blog/:id"
-            render={() => <Blog setFilter={setFilter} dark={dark} />}
+            render={() => (
+              <Blog notify={notify} setFilter={setFilter} dark={dark} />
+            )}
           />
-          <Route path="/edit/:id" render={() => <Edit dark={dark} />} />
+          <Route
+            path="/edit/:id"
+            render={() => <Edit notify={notify} dark={dark} />}
+          />
           <Redirect to="/home" />
         </Switch>
+        <ToastContainer
+          position="bottom-right"
+          autoClose={3000}
+          hideProgressBar
+          newestOnTop
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss={false}
+          draggable
+          pauseOnHover
+        />
       </div>
     </Router>
   );

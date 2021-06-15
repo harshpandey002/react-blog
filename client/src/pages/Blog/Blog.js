@@ -8,7 +8,7 @@ import "./Blog.css";
 import "../style.css";
 import { container } from "../../animation/animate";
 
-function Blog({ setFilter, dark }) {
+function Blog({ notify, setFilter, dark }) {
   return (
     <motion.div
       className="Page BlogRoute"
@@ -18,7 +18,7 @@ function Blog({ setFilter, dark }) {
     >
       <Filter dark={dark} setFilter={setFilter} />
       <BlogDetails dark={dark} />
-      <Action dark={dark} />
+      <Action notify={notify} dark={dark} />
     </motion.div>
   );
 }
