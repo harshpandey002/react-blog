@@ -7,6 +7,26 @@
   font-weight: 600;
 }
 
+.Filter .selected {
+  font-weight: 600;
+  background-color: #2a2a2a;
+  color: white;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.Filter .selected:hover .btn--name {
+  color: white;
+}
+.Filter .selected:hover .btn--icon {
+  border-radius: 20px;
+}
+
+.Filter-dark .selected {
+  font-weight: 600;
+  background-color: black;
+}
+
 @media only screen and (max-width: 1090px) {
   .Filter .btn:hover .btn--icon {
     margin-right: 0;

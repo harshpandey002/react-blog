@@ -33,12 +33,14 @@ function Action({ dark }) {
 
   return (
     <div className={`Action ${dark ? `Action-dark` : ""}`}>
-      <div onClick={favHandler} className="btn">
+      <div onClick={favHandler} className={`btn ${story.like ? `like` : ""}`}>
         <div className="btn--icon">
           <FontAwesomeIcon icon={faHeart} />
         </div>
         <div className="btn--name">
-          <span className="hideText">Add to </span>
+          <span className="hideText">{`${
+            story.like ? `Remove ` : `Add to `
+          }`}</span>
           <span className="actionText">Fav</span>
         </div>
       </div>

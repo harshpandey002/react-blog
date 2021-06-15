@@ -30,6 +30,7 @@
   width: 40px;
   height: 40px;
   transition: all 0.3s ease;
+  transition-property: margin, transform;
 }
 
 @media only screen and (min-width: 780px) {

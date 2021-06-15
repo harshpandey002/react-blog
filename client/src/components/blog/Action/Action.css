@@ -18,6 +18,14 @@
   }
 }
 
+.like {
+  color: red;
+}
+
+.like:hover {
+  color: red !important;
+}
+
 @media only screen and (max-width: 1090px) {
   .Action .btn:hover .btn--icon {
     margin-right: 0;
