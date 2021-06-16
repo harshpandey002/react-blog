@@ -33,6 +33,11 @@ body {
   transition: all 0.5s ease;
 }
 
+::selection {
+  background-color: rgba(0, 0, 0, 0.692);
+  color: rgb(238, 238, 238);
+}
+
 ::-webkit-scrollbar {
   width: 0px;
 }
