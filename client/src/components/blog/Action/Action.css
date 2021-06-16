@@ -12,6 +12,11 @@
   font-weight: 600;
 }
 
+.disable {
+  color: rgb(133, 133, 133);
+  pointer-events: none;
+}
+
 @media only screen and (max-width: 1285px) {
   .hideText {
     display: none;

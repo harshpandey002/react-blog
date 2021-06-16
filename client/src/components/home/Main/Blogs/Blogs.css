@@ -21,6 +21,16 @@
   justify-content: space-between;
   transition: all 0.2s;
 }
+
+.intro {
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.intro .desc p:nth-child(1) {
+  color: rgb(255, 96, 56);
+}
+
 .card:hover {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;

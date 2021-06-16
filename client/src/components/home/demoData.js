@@ -1,10 +1,12 @@
 export const demoData = [
   {
     _id: "1",
-    title: "Demo Title 1",
-    description: "Demo description 1",
-    category: "entertainment",
-    blogData: "<h1>Demo Story 1</h1>",
+    title: "Hello from the creator of this App",
+    description:
+      "Thanks a lot for checking my project. I'll be very glad if you suggest any improvment through Linkedin post.",
+    category: "Harsh Pandey",
+    blogData:
+      "<p><strong>Thanks</strong> for checking out my Projcect.<br>Hope you like it</p>",
     created: Date(),
     like: false,
   },
@@ -21,7 +23,8 @@ export const demoData = [
   {
     _id: "3",
     title: "A Room Full of Change",
-    description: "Overcoming the difficulties of my newfound living situation.",
+    description:
+      "Don’t bother with CSS frameworks. Create responsive gr_id systems quickly with react, flexbox and styled...",
     category: "health",
     blogData: "<h1>Demo Story 3</h1>",
     created: Date(),
@@ -40,8 +43,7 @@ export const demoData = [
   {
     _id: "5",
     title: "Journey of Improving React App Performance by 10x",
-    description:
-      "Ever got this “Aw! Snap” on your application? Tried to solve it? Did you just google it and find no...",
+    description: "Overcoming the difficulties of my newfound living situation.",
     category: "programming",
     blogData: "<h1>Demo Story 5</h1>",
     created: Date(),
@@ -111,7 +113,7 @@ export const demoData = [
     _id: "12",
     title: "Create a Responsive Gr_id With React, Flexbox & Styled-Components",
     description:
-      "Don’t bother with CSS frameworks. Create responsive gr_id systems quickly with react, flexbox and styled...",
+      "Ever got this “Aw! Snap” on your application? Tried to solve it? Did you just google it and find no...",
     category: "programming",
     blogData: "<h1>Demo Story 12</h1>",
     created: Date(),

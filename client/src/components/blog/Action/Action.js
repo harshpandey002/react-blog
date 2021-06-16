@@ -23,6 +23,9 @@ function Action({ notify, dark }) {
   )[0];
 
   const editHandler = () => {
+    if (params.id == "1") {
+      return;
+    }
     history.push(`/edit/${params.id}`);
   };
 
@@ -44,7 +47,10 @@ function Action({ notify, dark }) {
           <span className="actionText">Fav</span>
         </div>
       </div>
-      <div onClick={editHandler} className="btn">
+      <div
+        onClick={editHandler}
+        className={`btn ${params.id == "1" ? `disable` : ``}`}
+      >
         <div className="btn--icon">
           <FontAwesomeIcon icon={faPen} />
         </div>

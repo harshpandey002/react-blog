@@ -76,9 +76,9 @@ function Form({ notify, blog, setBlog, dark }) {
     });
 
     if (post) {
-      setBlog((blog) => ({
+      setBlog({
         ...post,
-      }));
+      });
     }
   }, [blog._id]);
 
