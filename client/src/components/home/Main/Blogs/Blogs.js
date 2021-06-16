@@ -12,7 +12,7 @@ import { motion, AnimateSharedLayout } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faRandom } from "@fortawesome/free-solid-svg-icons";
 import "./Blogs.css";
-import { blogCard, container, parent } from "../../../../animation/animate";
+import { blogCard, parent } from "../../../../animation/animate";
 
 function Blogs({ filter, dark }) {
   const history = useHistory();
@@ -52,7 +52,7 @@ function Blogs({ filter, dark }) {
               <motion.div
                 key="key"
                 className={`card ${dark ? `card-dark` : ""} ${
-                  story.category == "Harsh Pandey" ? `intro` : ""
+                  story.category === "Harsh Pandey" ? `intro` : ""
                 }`}
                 onClick={() => cardHandler(story._id)}
                 variants={blogCard}

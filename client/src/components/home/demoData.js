@@ -3,7 +3,7 @@ export const demoData = [
     _id: "1",
     title: "Hello from the creator of this App",
     description:
-      "Thanks a lot for checking my project. I'll be very glad if you suggest any improvment through Linkedin post.",
+      "Thanks a lot for checking my project. If you have any suggestions, please do let me know.",
     category: "Harsh Pandey",
     blogData:
       "<p><strong>Thanks</strong> for checking out my Projcect.<br>Hope you like it</p>",

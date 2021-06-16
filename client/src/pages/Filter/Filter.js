@@ -30,7 +30,7 @@ function Filter({ filter, setFilter, dark }) {
     <div className={`Filter ${dark ? `Filter-dark` : ""}`}>
       <div
         onClick={() => filterHandler("global", "global")}
-        className={`btn ${filter.filterCheck == "global" ? `selected` : ``}`}
+        className={`btn ${filter.filterCheck === "global" ? `selected` : ``}`}
       >
         <div className="btn--icon">
           <FontAwesomeIcon icon={faGlobeAmericas} />
@@ -39,7 +39,7 @@ function Filter({ filter, setFilter, dark }) {
       </div>
       <div
         onClick={() => filterHandler("business")}
-        className={`btn ${filter.filterCheck == "business" ? `selected` : ``}`}
+        className={`btn ${filter.filterCheck === "business" ? `selected` : ``}`}
       >
         <div className="btn--icon">
           <FontAwesomeIcon icon={faIdCard} />
@@ -49,7 +49,7 @@ function Filter({ filter, setFilter, dark }) {
       <div
         onClick={() => filterHandler("entertainment")}
         className={`btn ${
-          filter.filterCheck == "entertainment" ? `selected` : ``
+          filter.filterCheck === "entertainment" ? `selected` : ``
         }`}
       >
         <div className="btn--icon">
@@ -59,7 +59,7 @@ function Filter({ filter, setFilter, dark }) {
       </div>
       <div
         onClick={() => filterHandler("sports")}
-        className={`btn ${filter.filterCheck == "sports" ? `selected` : ``}`}
+        className={`btn ${filter.filterCheck === "sports" ? `selected` : ``}`}
       >
         <div className="btn--icon">
           <FontAwesomeIcon icon={faVolleyballBall} />
@@ -68,7 +68,7 @@ function Filter({ filter, setFilter, dark }) {
       </div>
       <div
         onClick={() => filterHandler("health")}
-        className={`btn ${filter.filterCheck == "health" ? `selected` : ``}`}
+        className={`btn ${filter.filterCheck === "health" ? `selected` : ``}`}
       >
         <div className="btn--icon">
           <FontAwesomeIcon icon={faPlusCircle} />
@@ -78,7 +78,7 @@ function Filter({ filter, setFilter, dark }) {
       <div
         onClick={() => filterHandler("programming")}
         className={`btn ${
-          filter.filterCheck == "programming" ? `selected` : ``
+          filter.filterCheck === "programming" ? `selected` : ``
         }`}
       >
         <div className="btn--icon">
@@ -88,7 +88,7 @@ function Filter({ filter, setFilter, dark }) {
       </div>
       <div
         onClick={() => filterHandler("", "like")}
-        className={`btn ${filter.filterName == "like" ? `selected` : ``}`}
+        className={`btn ${filter.filterName === "like" ? `selected` : ``}`}
       >
         <div className="btn--icon">
           <FontAwesomeIcon icon={faHeart} />
