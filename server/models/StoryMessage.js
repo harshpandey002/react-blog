@@ -6,6 +6,7 @@ const storySchema = mongoose.Schema({
   description: String,
   category: String,
   blogData: String,
+  created: Date,
   like: Boolean,
 });
 
