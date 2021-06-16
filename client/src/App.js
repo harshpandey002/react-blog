@@ -74,7 +74,12 @@ function App() {
           <Route
             path="/blog/:id"
             render={() => (
-              <Blog notify={notify} setFilter={setFilter} dark={dark} />
+              <Blog
+                notify={notify}
+                filter={filter}
+                setFilter={setFilter}
+                dark={dark}
+              />
             )}
           />
           <Route

@@ -13,7 +13,7 @@ import {
 
 import { useHistory, useParams } from "react-router-dom";
 
-function Filter({ setFilter, dark }) {
+function Filter({ filter, setFilter, dark }) {
   const history = useHistory();
 
   const filterHandler = (check, name = "category") => {
@@ -28,43 +28,68 @@ function Filter({ setFilter, dark }) {
 
   return (
     <div className={`Filter ${dark ? `Filter-dark` : ""}`}>
-      <div onClick={() => filterHandler("global", "global")} className="btn">
+      <div
+        onClick={() => filterHandler("global", "global")}
+        className={`btn ${filter.filterCheck == "global" ? `selected` : ``}`}
+      >
         <div className="btn--icon">
           <FontAwesomeIcon icon={faGlobeAmericas} />
         </div>
         <div className="btn--name">Global</div>
       </div>
-      <div onClick={() => filterHandler("business")} className="btn">
+      <div
+        onClick={() => filterHandler("business")}
+        className={`btn ${filter.filterCheck == "business" ? `selected` : ``}`}
+      >
         <div className="btn--icon">
           <FontAwesomeIcon icon={faIdCard} />
         </div>
         <div className="btn--name">Business</div>
       </div>
-      <div onClick={() => filterHandler("entertainment")} className="btn">
+      <div
+        onClick={() => filterHandler("entertainment")}
+        className={`btn ${
+          filter.filterCheck == "entertainment" ? `selected` : ``
+        }`}
+      >
         <div className="btn--icon">
           <FontAwesomeIcon icon={faPlay} />
         </div>
         <div className="btn--name">Entertainment</div>
       </div>
-      <div onClick={() => filterHandler("sports")} className="btn">
+      <div
+        onClick={() => filterHandler("sports")}
+        className={`btn ${filter.filterCheck == "sports" ? `selected` : ``}`}
+      >
         <div className="btn--icon">
           <FontAwesomeIcon icon={faVolleyballBall} />
         </div>
         <div className="btn--name">Sports</div>
       </div>
-      <div onClick={() => filterHandler("health")} className="btn">
+      <div
+        onClick={() => filterHandler("health")}
+        className={`btn ${filter.filterCheck == "health" ? `selected` : ``}`}
+      >
         <div className="btn--icon">
           <FontAwesomeIcon icon={faPlusCircle} />
         </div>
         <div className="btn--name">Health</div>
       </div>
-      <div onClick={() => filterHandler("programming")} className="btn">
+      <div
+        onClick={() => filterHandler("programming")}
+        className={`btn ${
+          filter.filterCheck == "programming" ? `selected` : ``
+        }`}
+      >
         <div className="btn--icon">
           <FontAwesomeIcon icon={faCode} />
         </div>
         <div className="btn--name">Programming</div>
       </div>
-      <div onClick={() => filterHandler("", "like")} className="btn">
+      <div
+        onClick={() => filterHandler("", "like")}
+        className={`btn ${filter.filterName == "like" ? `selected` : ``}`}
+      >
         <div className="btn--icon">
           <FontAwesomeIcon icon={faHeart} />
         </div>

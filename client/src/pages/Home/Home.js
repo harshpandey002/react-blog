@@ -14,7 +14,7 @@ function Home({ setDark, dark, demo, setDemo, filter, setFilter }) {
       initial="hidden"
       animate="show"
     >
-      <Filter dark={dark} setFilter={setFilter} />
+      <Filter dark={dark} filter={filter} setFilter={setFilter} />
       <Main dark={dark} filter={filter} />
       <Nav dark={dark} setDark={setDark} demo={demo} setDemo={setDemo} />
     </motion.div>
