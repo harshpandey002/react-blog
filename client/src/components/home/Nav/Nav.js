@@ -1,13 +1,23 @@
 import React, { useRef, useEffect } from "react";
+
+//Router
 import { useHistory } from "react-router-dom";
+
+//uuid
 import { v4 as uuidv4 } from "uuid";
 
+//Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faRandom, faAdjust } from "@fortawesome/free-solid-svg-icons";
 
+//Redux
 import { useDispatch } from "react-redux";
 import { createStory } from "../../../actions/story";
+
+//Demo Data
 import { demoData } from "../demoData";
+
+//CSS
 import "./Nav.css";
 
 function Nav({ demo, setDemo, dark, setDark }) {

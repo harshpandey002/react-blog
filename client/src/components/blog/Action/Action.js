@@ -1,5 +1,9 @@
 import React from "react";
+
+//Router
 import { useParams, useHistory } from "react-router-dom";
+
+//Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHeart,
@@ -12,6 +16,7 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import { deleteStory, updateStory } from "../../../actions/story";
 
+//CSS
 import "./Action.css";
 
 function Action({ notify, dark }) {

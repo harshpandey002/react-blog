@@ -1,12 +1,15 @@
 import React from "react";
-import "./Info.css";
 
+//Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGithub,
   faLinkedin,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
+
+//CSS
+import "./Info.css";
 
 function Info() {
   return (

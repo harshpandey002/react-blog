@@ -1,5 +1,6 @@
 import React from "react";
-import "./Filter.css";
+
+//Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faPlay,
@@ -11,7 +12,11 @@ import {
   faIdCard,
 } from "@fortawesome/free-solid-svg-icons";
 
+//Router
 import { useHistory, useParams } from "react-router-dom";
+
+//CSS
+import "./Filter.css";
 
 function Filter({ filter, setFilter, dark }) {
   const history = useHistory();

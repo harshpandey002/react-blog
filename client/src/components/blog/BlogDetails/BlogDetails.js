@@ -10,6 +10,7 @@ import { useParams } from "react-router-dom";
 //Redux
 import { useSelector } from "react-redux";
 
+//CSS
 import "./BlogDetails.css";
 
 function BlogDetails({ dark }) {

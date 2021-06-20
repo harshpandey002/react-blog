@@ -5,14 +5,20 @@ import { useSelector } from "react-redux";
 
 //Router
 import { useHistory } from "react-router-dom";
+
+//Moment
 import moment from "moment";
 
+//Framer Motion
 import { motion, AnimateSharedLayout } from "framer-motion";
+import { blogCard, parent } from "../../../../animation/animate";
 
+//Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faRandom } from "@fortawesome/free-solid-svg-icons";
+
+//CSS
 import "./Blogs.css";
-import { blogCard, parent } from "../../../../animation/animate";
 
 function Blogs({ filter, dark }) {
   const history = useHistory();

@@ -1,16 +1,23 @@
 import React, { useEffect } from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import TextField from "@material-ui/core/TextField";
-import MenuItem from "@material-ui/core/MenuItem";
+
+//Material-UI components
 import FormControl from "@material-ui/core/FormControl";
-import InputLabel from "@material-ui/core/InputLabel";
+import TextField from "@material-ui/core/TextField";
 import Select from "@material-ui/core/Select";
 import Button from "@material-ui/core/Button";
-import { createStory, updateStory } from "../../../actions/story";
-import { useParams, useHistory } from "react-router-dom";
+import MenuItem from "@material-ui/core/MenuItem";
+import InputLabel from "@material-ui/core/InputLabel";
 
-import "./Form.css";
+//Redux
+import { createStory, updateStory } from "../../../actions/story";
+
+//Router
+import { useParams, useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+
+//CSS
+import { makeStyles } from "@material-ui/core/styles";
+import "./Form.css";
 
 const useStyles = makeStyles({
   root: {
