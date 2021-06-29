@@ -6,6 +6,7 @@ import {
   faGithub,
   faLinkedin,
   faInstagram,
+  faFigma,
 } from "@fortawesome/free-brands-svg-icons";
 
 //CSS
@@ -14,6 +15,17 @@ import "./Info.css";
 function Info() {
   return (
     <div className="Info">
+      <FontAwesomeIcon
+        onClick={() =>
+          window.open(
+            "https://www.figma.com/file/pFvvZrfmXOpD2armyqTRyA/Blog-App",
+            "_blank"
+          )
+        }
+        className="brands"
+        size="2x"
+        icon={faFigma}
+      />
       <FontAwesomeIcon
         onClick={() =>
           window.open("https://github.com/harshpandey002/react-blog/", "_blank")
