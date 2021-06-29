@@ -16,16 +16,16 @@
 }
 
 .brands:nth-child(1):hover {
-  color: rgb(255, 124, 16);
+  color: #ff5252;
 }
 .brands:nth-child(2):hover {
   color: white;
 }
 .brands:nth-child(3):hover {
-  color: rgb(96, 187, 247);
+  color: #60bbf7;
 }
 .brands:nth-child(4):hover {
-  color: rgb(255, 147, 219);
+  color: #ff93db;
 }
 
 @media only screen and (max-width: 780px) {
