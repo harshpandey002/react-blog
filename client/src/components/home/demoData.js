@@ -3,16 +3,16 @@ export const demoData = [
     _id: "1",
     title: "Hello from the creator of this App",
     description:
-      "Thanks a lot for checking my project. If you have any suggestions, please do let me know.",
+      "Thank you so much for taking the time to look over my project.",
     category: "Harsh Pandey",
     blogData:
-      "<p><strong>Thanks</strong> for checking out my Projcect.<br>Hope you like it</p>",
+      "<p><strong>Thank you so much</strong> for taking the time to look over my project. Please let me know if you have any suggestions.<br>Also, I'm aware of the white FORM in the dark theme and the lack of filters in the mobile version of the app.<br>If you're using a mobile device, I recommend using a laptop to get the most out of this app.</p>",
     created: Date(),
     like: false,
   },
   {
     _id: "2",
-    title: "How to Gain Intuition and Learn Fast",
+    title: "Gain Intuition and Learn Fast",
     description:
       "Tapping into your brain’s powerful “procedural learning system” can help you develop intuitive problem solv...",
     category: "programming",
@@ -291,7 +291,7 @@ export const demoData = [
   },
   {
     _id: "30",
-    title: "Playing V_ideo Games Is Killing You",
+    title: "Playing Video Games Is Killing You",
     description:
       "In early high school, most of my time was spent playing v_ideo games. Most of my memories from th...",
     category: "entertainment",
